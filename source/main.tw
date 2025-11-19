@@ -2,4 +2,7 @@
 [[Day Start]]
 
 :: Day Start
-Rainy weather. Figures.
+<<set $weather = getWeather()>>
+<<if $weather == "rainy">>
+Damn rain
+<</if>>``
