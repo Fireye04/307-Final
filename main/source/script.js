@@ -7,7 +7,7 @@ config.history.controls = false;
 */
 
 function getWeather(options = ["rainy", "windy", "sunny"]) {
-    const roll = Math.floor(Math.random() * options.length + 0.5);
+    const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
     return options[roll];
 }
