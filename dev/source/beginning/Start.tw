@@ -1,3 +1,7 @@
+/* Handles Dream sequence -> wake 
+* Starting Node
+*/
+
 :: Start
 Lightning crackles across the sky.
 
@@ -18,11 +22,11 @@ grimacing with each subsequent impact.
 And moment by moment the wanderer endures,
 slowly but surely 
 making it 
-[[through the night|beginning]].
+[[through the night|wake]].
 
 :: relent
 Exhausted, they lower their barriers,
-allowing *the voices* 
+allowing the voices
 to rush inside. 
 
 They collapse 
@@ -34,7 +38,6 @@ to tear
 them 
 to shreds 
 once again.
-
-[[As they deserve|beginning]].
+[[As they deserve|wake]].
 
 
