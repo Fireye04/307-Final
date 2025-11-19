@@ -2,7 +2,7 @@
 [[Day Start]]
 
 :: Day Start
-<<set $weather = getWeather()>>
+<<set $weather = <<run getWeather()>>>>
 <<if $weather == "rainy">>
 Damn rain
-<</if>>``
+<</if>>
