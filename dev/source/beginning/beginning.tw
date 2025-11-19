@@ -1,7 +1,7 @@
 :: beginning
 The wanderer wakes in their tent exhausted.
 
-<<set $weather = getWeather(["sunny"])>>
+<<set $weather = getWeather()>>
 <<if $weather === "rainy">>The sag in the roof of their tent and steady 
 "drip, 
 drip, 
@@ -9,16 +9,29 @@ drip" of water suggest that it had rained the night before.
 
 "Shit" they mutter as they get dressed, their clothes soaked from the water that had poured in the tent entrance. 
 They'd have to remember to dig a moat around their tent next time<<if not $endured>>, 
-like Mac had always told them. 
+like [[Mac]] had always told them. 
 
-With a shaky sigh, they [[exit the tent|camp]]<<else>>. 
-They shoulder aside the entrance flap and [[exit the tent|camp]] with a sigh<</if>>.
+With a shaky sigh, they [[exit the tent|start-camp]]<<else>>. 
+They shoulder aside the entrance flap and [[exit the tent|start-camp]] with a sigh<</if>>.
 <<elseif $weather === "sunny">>The first rays of sun 
 creep in 
-through a crack in the entrance, casting the hazy shadow of a tree branch on the wall opposite. 
-<<if not $endured>>The shadow reminds them of Vivian. 
+through a crack in the entrance, casting the hazy shadow of a tree branch on the wall opposite.<<if not $endured>>
+The shadow reminds them of [[Vivian]].
+They get dressed with a sign and [[make their way out of the tent|start-camp]]<<else>>
+"Nice day out" they muse as they get dressed then [[exit the tent|start-camp]]
+<</if>>
+<</if>>
+
+:: Mac
+Mac.
+The man started each day with a smile and a cauldron of simmering soup for the camp. 
+The wanderer looked up to him.
+
+With a morose sigh and a small grumble from their stomach, they [[shoulder aside the tent's entrance flap|start-camp]] their mind on soup and camaraderie.
+
+:: Vivian
+Vivian. 
 She was always the early riser. 
-They could still hear the echoes of her calling them to wake up through the tent's entrance.
-<</if>>
-"Nice day out" they muse as they get dressed.
-<</if>>
+They could still hear the echoes of her shouting to wake up through the tent's entrance.
+
+With a morose sigh, they [[shoulder aside the tent's entrance flap|start-camp]].
