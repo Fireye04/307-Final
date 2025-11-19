@@ -120,8 +120,12 @@ function getWeather(options = ["rainy", "windy", "sunny"]) {
 
 window.getWeather = (options = ["rainy", "windy", "sunny"]) => getWeather(options);
 </script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">[[Day Start]]</tw-passagedata><tw-passagedata pid="2" name="Day Start" tags="" position="225,100" size="100,100">&lt;&lt;set $weather =  getWeather()&gt;&gt;
-&lt;&lt;if $weather == &quot;rainy&quot;&gt;&gt;
+&lt;&lt;if $weather === &quot;rainy&quot;&gt;&gt;
 Damn rain
+[&lt;&lt;elseif $weather === &quot;sunny&quot;&gt;&gt;]
+Nice day out!
+[&lt;&lt;elseif $weather === &quot;windy&quot;&gt;&gt;]
+Gah, my hat!
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="350,100" size="100,100"></tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
