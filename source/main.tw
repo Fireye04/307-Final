@@ -3,6 +3,10 @@
 
 :: Day Start
 <<set $weather =  getWeather()>>
-<<if $weather == "rainy">>
+<<if $weather === "rainy">>
 Damn rain
+[<<elseif $weather === "sunny">>]
+Nice day out!
+[<<elseif $weather === "windy">>]
+Gah, my hat!
 <</if>>
