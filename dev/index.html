@@ -118,14 +118,30 @@ window.endureCount = 0;
 
 /********STRUCTS********/
 class thingAtCamp {
-    constructor(itemName, rainyDesc, sunnyDesc, enduredRainyDesc, enduredSunnyDesc) {
+    constructor(itemName, enduredRainyDesc, enduredSunnyDesc, rainyDesc, sunnyDesc) {
         this.name = itemName;
         this.rainyDesc = rainyDesc;
         this.sunnyDesc = sunnyDesc;
         this.enduredRainyDesc = enduredRainyDesc;
         this.enduredSunnyDesc = enduredSunnyDesc;
     }
+
     getDescription(weather, endured){
+        if (weather === "sunny" && endured === true) {
+            return this.enduredSunnyDesc;
+
+        } else if (weather === "rainy" && endured === true) {
+            return this.enduredRainyDesc;
+
+        } else if (weather === "sunny" && endured === false) {
+            return this.sunnyDesc;
+
+        } else if (weather === "rainy" && endured === false) {
+            return this.rainyDesc;
+
+        } else {
+            return "The traveller glares up at the sky and shakes their fist cursing some unknown god for their shitty programming. (something went wrong and this is an error message, if you're a kind citizen, you can report this at https://github.com/Fireye04/306-Final/issues/new please bring screenshots!)"
+        }
 
     }
 }
@@ -143,7 +159,10 @@ window.getWeather = (options = ["rainy", "sunny"]) => getWeather(options);
 
 
 /********THINGS AT CAMP********/
-var thingsAtCampDefault = ["campfire", ""];
+
+let campfire = thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
+
+var thingsAtCampDefault = [campfire];
 var thingsAtCamp = [];
 
 function setThingsAtCamp(things, noDefaults) {
