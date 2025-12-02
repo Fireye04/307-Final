@@ -4,6 +4,10 @@
 
 Wander vast lands discovering friends, enemies and perhaps even a reason why you're doing this in the first place.
 
+## Setting
+
+Wild west.
+
 ## Mechanics
 
 ### Enduring
@@ -35,3 +39,17 @@ Two weather states will be added to improve immersion and worldbuilding. Each da
 ### Story told through random events
 
 Events need some sort of throughline! The wanderer's ghosts serve to do so very well. 
+
+Each NPC gets a pool of random events that occur at camp linearly, and a couple that can trigger after their storyline is exhausted.
+
+Actual story beats are a function of days passed and Endurance count. Could also make it a function of which characters have been completed up to that point.
+
+## NPCs
+
+### Mac
+
+Portly, middle aged man. Cook and former blacksmith. Enchanted with the process of a craft and absolutely loves to teach. 
+
+### Vivian
+
+Hunter, trapper. 

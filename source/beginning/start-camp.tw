@@ -3,4 +3,9 @@
 */
 
 :: start-camp
+<<run setThingsAtCamp()>>
 They survey their camp. Time to pack up.
+
+<<for thing range window.thingsAtCamp>>
+thing.getDescription()
+<</for>>

@@ -8,7 +8,8 @@ config.history.controls = false;
 
 /********GLOBALS********/
 window.endureCount = 0;
-
+window.currentWeather = "sunny";
+window.thingsAtCamp = [];
 
 /********STRUCTS********/
 class thingAtCamp {
@@ -18,6 +19,14 @@ class thingAtCamp {
         this.sunnyDesc = sunnyDesc;
         this.enduredRainyDesc = enduredRainyDesc;
         this.enduredSunnyDesc = enduredSunnyDesc;
+    }
+
+    constructor(itemName, desc) {
+        this.name = itemName;
+        this.rainyDesc = desc;
+        this.sunnyDesc = desc;
+        this.enduredRainyDesc = desc;
+        this.enduredSunnyDesc = desc;
     }
 
     getDescription(weather, endured){
@@ -43,21 +52,20 @@ class thingAtCamp {
 
 
 /********WEATHER********/
-function getWeather(options) {
+function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
     console.log(roll);
     return options[roll];
 }
-window.getWeather = (options = ["rainy", "sunny"]) => getWeather(options);
+window.newWeather = (options = ["rainy", "sunny"]) => getWeather(options);
 
 
 /********THINGS AT CAMP********/
 
-let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
+let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
 
 var thingsAtCampDefault = [campfire];
-var thingsAtCamp = [];
 
 function setThingsAtCamp(things, noDefaults) {
     if (noDefaults){
@@ -70,3 +78,4 @@ function setThingsAtCamp(things, noDefaults) {
 }
 
 window.setThingsAtCamp = (things = thingsAtCampDefault, noDefaults = false) => setThingsAtCamp(things, noDefaults);
+
