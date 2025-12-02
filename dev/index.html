@@ -114,7 +114,8 @@ config.history.controls = false;
 
 /********GLOBALS********/
 window.endureCount = 0;
-
+window.currentWeather = "sunny";
+window.thingsAtCamp = [];
 
 /********STRUCTS********/
 class thingAtCamp {
@@ -124,6 +125,14 @@ class thingAtCamp {
         this.sunnyDesc = sunnyDesc;
         this.enduredRainyDesc = enduredRainyDesc;
         this.enduredSunnyDesc = enduredSunnyDesc;
+    }
+
+    constructor(itemName, desc) {
+        this.name = itemName;
+        this.rainyDesc = desc;
+        this.sunnyDesc = desc;
+        this.enduredRainyDesc = desc;
+        this.enduredSunnyDesc = desc;
     }
 
     getDescription(weather, endured){
@@ -149,21 +158,20 @@ class thingAtCamp {
 
 
 /********WEATHER********/
-function getWeather(options) {
+function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
     console.log(roll);
     return options[roll];
 }
-window.getWeather = (options = ["rainy", "sunny"]) => getWeather(options);
+window.newWeather = (options = ["rainy", "sunny"]) => getWeather(options);
 
 
 /********THINGS AT CAMP********/
 
-let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
+let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
 
 var thingsAtCampDefault = [campfire];
-var thingsAtCamp = [];
 
 function setThingsAtCamp(things, noDefaults) {
     if (noDefaults){
@@ -176,6 +184,7 @@ function setThingsAtCamp(things, noDefaults) {
 }
 
 window.setThingsAtCamp = (things = thingsAtCampDefault, noDefaults = false) => setThingsAtCamp(things, noDefaults);
+
 </script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">Lightning crackles across the sky.
 
 The nightly screams 
@@ -206,7 +215,12 @@ to tear
 them 
 to shreds 
 once again.
-[[As they deserve|wake]].</tw-passagedata><tw-passagedata pid="4" name="start-camp" tags="" position="475,100" size="100,100">They survey their camp. Time to pack up.</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
+[[As they deserve|wake]].</tw-passagedata><tw-passagedata pid="4" name="start-camp" tags="" position="475,100" size="100,100">&lt;&lt;run setThingsAtCamp()&gt;&gt;
+They survey their camp. Time to pack up.
+
+&lt;&lt;for thing range window.thingsAtCamp&gt;&gt;
+thing.getDescription()
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
 &lt;&lt;set $weather = getWeather()&gt;&gt;
 &lt;&lt;if $weather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
 drip, 
