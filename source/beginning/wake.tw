@@ -25,7 +25,7 @@ casting the hazy shadow of a tree branch on the wall opposite.<<if not $endured>
 
 The shadow reminds them of [[Vivian]], standing just outside the tent as she used to.
 
-They get dressed with a sign and [[make their way out of the tent|start-camp]]<<else>>
+They get dressed with a sigh and [[make their way out of the tent|start-camp]]<<else>>
 
 "Nice day out" they muse as they get dressed then [[exit the tent|start-camp]]
 <</if>>
