@@ -6,6 +6,8 @@
 <<run setThingsAtCamp()>>
 They survey their camp. Time to pack up.
 
+<<= window.thingsAtCamp>>
+
 <<for i, thing range window.thingsAtCamp>>
 <<= thing.getDescription() >>
 <</for>>
