@@ -8,8 +8,10 @@ config.history.controls = false;
 
 /********GLOBALS********/
 window.endureCount = 0;
+window.enduring = false;
 window.currentWeather = "sunny";
 window.thingsAtCamp = [];
+
 
 /********STRUCTS********/
 class thingAtCamp {
@@ -21,29 +23,40 @@ class thingAtCamp {
         this.sunnyDesc = sunnyDesc ?? enduredRainyDesc;
     }
 
-    getDescription(weather, endured){
-        if (weather === "sunny" && endured === true) {
+    getDescription(){
+        if (window.currentWeather === "sunny" && window.enduring === true) {
             return this.enduredSunnyDesc;
 
-        } else if (weather === "rainy" && endured === true) {
+        } else if (window.currentWeather === "rainy" && window.enduring === true) {
             return this.enduredRainyDesc;
 
-        } else if (weather === "sunny" && endured === false) {
+        } else if (window.currentWeather === "sunny" && window.enduring === false) {
             return this.sunnyDesc;
 
-        } else if (weather === "rainy" && endured === false) {
+        } else if (window.currentWeather === "rainy" && window.enduring === false) {
             return this.rainyDesc;
 
         } else {
             return "The traveller glares up at the sky and shakes their fist cursing some unknown god for their shitty programming. (something went wrong and this is an error message, if you're a kind citizen, you can report this at https://github.com/Fireye04/306-Final/issues/new please bring screenshots!)"
         }
-
     }
 }
 
 
+/********ENDURING********/
+
+function setIsEnduring(choice) {
+    window.enduring = choice;
+    if (choice) {
+        window.endureCount ++;
+    }
+}
+
+window.setIsEnduring = (choice) => setIsEnduring(choice);
+
 
 /********WEATHER********/
+
 function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
