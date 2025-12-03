@@ -13,20 +13,12 @@ window.thingsAtCamp = [];
 
 /********STRUCTS********/
 class thingAtCamp {
-    constructor(itemName, enduredRainyDesc, enduredSunnyDesc, rainyDesc, sunnyDesc) {
+    constructor(itemName, enduredRainyDesc, enduredSunnyDesc = null, rainyDesc = null, sunnyDesc = null) {
         this.name = itemName;
-        this.rainyDesc = rainyDesc;
-        this.sunnyDesc = sunnyDesc;
         this.enduredRainyDesc = enduredRainyDesc;
-        this.enduredSunnyDesc = enduredSunnyDesc;
-    }
-
-    constructor(itemName, desc) {
-        this.name = itemName;
-        this.rainyDesc = desc;
-        this.sunnyDesc = desc;
-        this.enduredRainyDesc = desc;
-        this.enduredSunnyDesc = desc;
+        this.enduredSunnyDesc = enduredSunnyDesc ?? enduredRainyDesc;
+        this.rainyDesc = rainyDesc ?? enduredRainyDesc;
+        this.sunnyDesc = sunnyDesc ?? enduredRainyDesc;
     }
 
     getDescription(weather, endured){
