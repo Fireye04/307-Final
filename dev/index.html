@@ -161,10 +161,9 @@ class thingAtCamp {
 function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
-    console.log(roll);
-    return options[roll];
+    window.currentWeather = options[roll];
 }
-window.newWeather = (options = ["rainy", "sunny"]) => getWeather(options);
+window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 
 /********THINGS AT CAMP********/
@@ -221,8 +220,8 @@ They survey their camp. Time to pack up.
 &lt;&lt;for thing range window.thingsAtCamp&gt;&gt;
 thing.getDescription()
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
-&lt;&lt;set $weather = getWeather()&gt;&gt;
-&lt;&lt;if $weather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
+&lt;&lt;run newWeather()&gt;&gt;
+&lt;&lt;if window.currentWeather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
 drip, 
 drip, 
 drip
@@ -235,7 +234,7 @@ like [[Mac]] had always told them.
 With a shaky sigh, they [[exit the tent|start-camp]]&lt;&lt;else&gt;&gt;. 
 
 They shoulder the entrance flap aside and [[exit the tent|start-camp]] with a sigh&lt;&lt;/if&gt;&gt;.
-&lt;&lt;elseif $weather === &quot;sunny&quot;&gt;&gt;The first rays of sun 
+&lt;&lt;elseif window.currentWeather === &quot;sunny&quot;&gt;&gt;The first rays of sun 
 creep in 
 through a crack in the entrance, 
 casting the hazy shadow of a tree branch on the wall opposite.&lt;&lt;if not $endured&gt;&gt;
