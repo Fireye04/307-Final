@@ -9,3 +9,11 @@ They survey their camp. Time to pack up.
 <<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
 <<= window.thingsAtCamp[_i].getDescription()>>
 <</for>>
+
+:: campfire
+
+campfire does fire things
+
+:: tent
+
+tentytentytent

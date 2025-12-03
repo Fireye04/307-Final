@@ -20,7 +20,7 @@ class thingAtCamp {
         this.enduredRainyDesc = enduredRainyDesc;
         this.enduredSunnyDesc = enduredSunnyDesc ?? enduredRainyDesc;
         this.rainyDesc = rainyDesc ?? enduredRainyDesc;
-        this.sunnyDesc = sunnyDesc ?? enduredRainyDesc;
+        this.sunnyDesc = (sunnyDesc ?? enduredSunnyDesc) ?? enduredRainyDesc;
     }
 
     getDescription(){
@@ -67,7 +67,8 @@ window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 /********THINGS AT CAMP********/
 
-let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.")
+let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The blackened coals of last night's [[campfire]] lay pooled in the shallow recess of the fire pit.")
+let tent = new thingAtCamp("tent", "")
 
 var thingsAtCampDefault = [campfire];
 
