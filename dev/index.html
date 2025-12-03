@@ -211,8 +211,8 @@ They survey their camp. Time to pack up.
 
 &lt;&lt;= window.thingsAtCamp&gt;&gt;
 
-&lt;&lt;for i, thing range window.thingsAtCamp&gt;&gt;
-&lt;&lt;= thing.getDescription() &gt;&gt;
+&lt;&lt;for _i to 0; _i lt window.thingsAtCamp.length; _i++&gt;&gt;
+&lt;&lt;= window.thingsAtCamp[_i].getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
 &lt;&lt;run newWeather()&gt;&gt;
 &lt;&lt;if window.currentWeather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
