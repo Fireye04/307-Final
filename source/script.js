@@ -68,11 +68,11 @@ var thingsAtCampDefault = [campfire];
 
 function setThingsAtCamp(things, noDefaults) {
     if (noDefaults){
-    thingsAtCamp = things;
+    window.thingsAtCamp = things;
 
     } else {
-        thingsAtCamp = thingsAtCampDefault;
-        thingsAtCamp.concat(things);
+        window.thingsAtCamp = thingsAtCampDefault;
+        window.thingsAtCamp.concat(things);
     }
 }
 
