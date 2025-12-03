@@ -210,7 +210,7 @@ once again.
 They survey their camp. Time to pack up.
 
 &lt;&lt;for thing range window.thingsAtCamp&gt;&gt;
-thing.getDescription()
+&lt;&lt;= thing.getDescription() &gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
 &lt;&lt;run newWeather()&gt;&gt;
 &lt;&lt;if window.currentWeather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
@@ -233,7 +233,7 @@ casting the hazy shadow of a tree branch on the wall opposite.&lt;&lt;if not $en
 
 The shadow reminds them of [[Vivian]], standing just outside the tent as she used to.
 
-They get dressed with a sign and [[make their way out of the tent|start-camp]]&lt;&lt;else&gt;&gt;
+They get dressed with a sigh and [[make their way out of the tent|start-camp]]&lt;&lt;else&gt;&gt;
 
 &quot;Nice day out&quot; they muse as they get dressed then [[exit the tent|start-camp]]
 &lt;&lt;/if&gt;&gt;
