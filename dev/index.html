@@ -209,7 +209,7 @@ once again.
 [[As they deserve|wake]].</tw-passagedata><tw-passagedata pid="4" name="start-camp" tags="" position="475,100" size="100,100">&lt;&lt;run setThingsAtCamp()&gt;&gt;
 They survey their camp. Time to pack up.
 
-&lt;&lt;for thing range window.thingsAtCamp&gt;&gt;
+&lt;&lt;for i, thing range window.thingsAtCamp&gt;&gt;
 &lt;&lt;= thing.getDescription() &gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="wake" tags="" position="600,100" size="100,100">The wanderer wakes in their tent exhausted.
 &lt;&lt;run newWeather()&gt;&gt;
