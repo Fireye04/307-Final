@@ -55,10 +55,9 @@ class thingAtCamp {
 function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
-    console.log(roll);
-    return options[roll];
+    window.currentWeather = options[roll];
 }
-window.newWeather = (options = ["rainy", "sunny"]) => getWeather(options);
+window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 
 /********THINGS AT CAMP********/
