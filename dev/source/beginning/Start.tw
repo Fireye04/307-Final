@@ -10,11 +10,12 @@ assault
 the wanderer's mental fortress 
 once again.
 
-[[They Endure|endure][$endured to true]]
-[[They Relent|relent][$endured to false]]
+[[They Endure|endure]]
+[[They Relent|relent]]
 
 :: endure
 <<set window.endureCount = window.endureCount + 1>>
+<<set window.enduring = true>>
 Their focus redoubles as the walls are pommeled 
 again 
 and again, 
@@ -26,6 +27,7 @@ making it
 [[through the night|wake]].
 
 :: relent
+<<set window.enduring = false>>
 Exhausted, they lower their barriers,
 allowing the voices
 to rush inside. 
