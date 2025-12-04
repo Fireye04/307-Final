@@ -10,10 +10,30 @@ They survey their camp. Time to pack up.
 <<= window.thingsAtCamp[_i].getDescription()>>
 <</for>>
 
+:: mid-cleanup
+<<if window.currentWeather === "rainy">>They once again survey the remaining campsite 
+to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
+
+<<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
+<<= window.thingsAtCamp[_i].getDescription()>>
+<</for>>
+
 :: campfire
 
-campfire does fire things
+The wanderer [[clears up|mid-cleanup]] their campfire.
 
 :: tent
 
-tentytentytent
+The wanderer [[clears up|mid-cleanup]] their tent.
+
+:: pack
+
+The wanderer [[clears up|mid-cleanup]] their pack.
+
+:: neal
+/*TODO: Make an npc make this comment*/
+The wanderer <<linkreplace "pats">>
+You were gonna call your horse a good boy, right?
+<</linkreplace>> Neal. 
+
+[["good boy."|mid-cleanup]] the wanderer says warmly.
