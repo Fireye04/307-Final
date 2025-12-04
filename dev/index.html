@@ -240,11 +240,11 @@ They survey their camp. Time to pack up.
 &lt;&lt;= window.thingsAtCamp[_i].getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="mid-cleanup" tags="" position="725,100" size="100,100">&lt;&lt;if window.currentWeather === &quot;rainy&quot;&gt;&gt;They once again survey the remaining campsite 
 to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once again surveying the remaining campsite.&lt;&lt;/if&gt;&gt;
-&lt;&lt;if window.thingsAtCamp.length lte 0&gt;&gt;
-[[Time to go|leave-start]].
-&lt;&lt;else&gt;&lt;&lt;for _i to 0; _i lt window.thingsAtCamp.length; _i++&gt;&gt;
+&lt;&lt;if window.thingsAtCamp.length gt 0&gt;&gt;
+&lt;&lt;for _i to 0; _i lt window.thingsAtCamp.length; _i++&gt;&gt;
 &lt;&lt;= window.thingsAtCamp[_i].getDescription()&gt;&gt;
-&lt;&lt;/for&gt;&gt;
+&lt;&lt;/for&gt;&gt;&lt;&lt;else&gt;&gt;
+[[Time to go|leave-start]].
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="campfire" tags="" position="850,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their campfire.
 &lt;&lt;run window.removeFromCamp(&quot;campfire&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="tent" tags="" position="975,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their tent.
 &lt;&lt;run window.removeFromCamp(&quot;tent&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="pack" tags="" position="1100,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their pack.
