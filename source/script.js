@@ -74,7 +74,7 @@ let neal = new thingAtCamp("neal", "[[Neal]] stands where he was left the night 
 
 var thingsAtCampDefault = [campfire, tent, pack, neal];
 
-function setThingsAtCamp(things, noDefaults) {
+function setTAC(things, noDefaults) {
     if (noDefaults) {
         window.thingsAtCamp = things;
 
@@ -84,5 +84,13 @@ function setThingsAtCamp(things, noDefaults) {
     }
 }
 
-window.setThingsAtCamp = (things = thingsAtCampDefault, noDefaults = false) => setThingsAtCamp(things, noDefaults);
+function removeFromCamp(thing) {
+    for (let i = 0; i < window.thingsAtCamp.length; i++) {
+        if (window.thingsAtCamp[i].name == thing) {
+            window.thingsAtCamp.splice(i, 1);
+        }
+    }
+}
+
+window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
 
