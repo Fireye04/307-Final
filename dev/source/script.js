@@ -69,8 +69,8 @@ window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The blackened coals of last night's [[campfire]] lay pooled in the shallow recess of the fire pit.")
 let tent = new thingAtCamp("tent", "The [[tent]] stands stout in the sunlight, a little worse for wear.", "The [[tent]] sags slightly weighted down by the previous night's downpour.")
-let pack = new thingAtCamp("pack", "The [[supply pack]] lays in the shade of a nearby tree.", "The moist [[supply pack]] lays in a stray puddle below a nearby tree")
-let neal = new thingAtCamp("neal", "[[Neal]] stands where he was left the night before calmly cropping a sunny patch of grass.", "[[Neal]] stands below a tree, shuddering slightly as a drip of water falls from the tree onto his neck.")
+let pack = new thingAtCamp("pack", "The [[supply pack|pack]] lays in the shade of a nearby tree.", "The moist [[supply pack]] lays in a stray puddle below a nearby tree")
+let neal = new thingAtCamp("neal", "[[Neal|neal]] stands where he was left the night before calmly cropping a sunny patch of grass.", "[[Neal]] stands below a tree, shuddering slightly as a drip of water falls from the tree onto his neck.")
 
 var thingsAtCampDefault = [campfire, tent, pack, neal];
 
@@ -88,9 +88,11 @@ function removeFromCamp(thing) {
     for (let i = 0; i < window.thingsAtCamp.length; i++) {
         if (window.thingsAtCamp[i].name == thing) {
             window.thingsAtCamp.splice(i, 1);
+            break;
         }
     }
 }
 
 window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
+window.removeFromCamp = (thing = "") => setTAC(thing);
 
