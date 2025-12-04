@@ -3,7 +3,7 @@
 */
 
 :: start-camp
-<<run setThingsAtCamp()>>
+<<run setTAC()>>
 They survey their camp. Time to pack up.
 
 <<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
