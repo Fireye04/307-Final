@@ -13,11 +13,11 @@ They survey their camp. Time to pack up.
 :: mid-cleanup
 <<if window.currentWeather === "rainy">>They once again survey the remaining campsite 
 to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
-<<if window.thingsAtCamp.length lte 0>>
-[[Time to go|leave-start]].
-<<else><<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
+<<if window.thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
 <<= window.thingsAtCamp[_i].getDescription()>>
-<</for>>
+<</for>><<else>>
+[[Time to go|leave-start]].
 <</if>>
 
 :: campfire
