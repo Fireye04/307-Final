@@ -86,7 +86,7 @@ function setTAC(things, noDefaults) {
 
 function removeFromCamp(thing) {
     for (let i = 0; i < window.thingsAtCamp.length; i++) {
-        if (window.thingsAtCamp[i].name == thing) {
+        if (window.thingsAtCamp[i].name === thing) {
             window.thingsAtCamp.splice(i, 1);
             break;
         }
