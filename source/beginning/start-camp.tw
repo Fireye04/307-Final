@@ -7,7 +7,7 @@
 They survey their camp. Time to pack up.
 
 <<for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++>>
-<<= sessionStorage.thingsAtCamp[_i].getDescription()>>
+<<= State.getVar(thingsAtCamp)[_i].getDescription()>>
 <</for>>
 
 :: mid-cleanup
