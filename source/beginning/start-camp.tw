@@ -6,16 +6,16 @@
 <<run setTAC()>>
 They survey their camp. Time to pack up.
 
-<<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
-<<= window.thingsAtCamp[_i].getDescription()>>
+<<for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++>>
+<<= sessionStorage.thingsAtCamp[_i].getDescription()>>
 <</for>>
 
 :: mid-cleanup
-<<if window.currentWeather === "rainy">>They once again survey the remaining campsite 
+<<if sessionStorage.currentWeather === "rainy">>They once again survey the remaining campsite 
 to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
-<<if window.thingsAtCamp.length gt 0>>
-<<for _i to 0; _i lt window.thingsAtCamp.length; _i++>>
-<<= window.thingsAtCamp[_i].getDescription()>>
+<<if sessionStorage.thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++>>
+<<= sessionStorage.thingsAtCamp[_i].getDescription()>>
 <</for>><<else>>
 [[Time to go|leave-start]].
 <</if>>
@@ -23,17 +23,17 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 :: campfire
 
 The wanderer [[clears up|mid-cleanup]] their campfire.
-<<run window.removeFromCamp("campfire")>>
+<<run sessionStorage.removeFromCamp("campfire")>>
 
 :: tent
 
 The wanderer [[clears up|mid-cleanup]] their tent.
-<<run window.removeFromCamp("tent")>>
+<<run sessionStorage.removeFromCamp("tent")>>
 
 :: pack
 
 The wanderer [[clears up|mid-cleanup]] their pack.
-<<run window.removeFromCamp("pack")>>
+<<run sessionStorage.removeFromCamp("pack")>>
 
 :: neal
 /*TODO: Make an npc make this comment*/
@@ -42,4 +42,4 @@ You were gonna call your horse a good boy, right?
 <</linkreplace>> Neal. 
 
 [["good boy."|mid-cleanup]] the wanderer says warmly.
-<<run window.removeFromCamp("neal")>>
+<<run sessionStorage.removeFromCamp("neal")>>
