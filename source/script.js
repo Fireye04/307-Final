@@ -52,7 +52,7 @@ function setIsEnduring(choice) {
     }
 }
 
-sessionStorage.setIsEnduring = (choice) => setIsEnduring(choice);
+window.setIsEnduring = (choice) => setIsEnduring(choice);
 
 
 /********WEATHER********/
@@ -62,7 +62,7 @@ function newWeather(options) {
 
     sessionStorage.currentWeather = options[roll];
 }
-sessionStorage.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
+window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 
 /********THINGS AT CAMP********/
@@ -93,6 +93,6 @@ function removeFromCamp(thing) {
     }
 }
 
-sessionStorage.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
-sessionStorage.removeFromCamp = (thing = "") => removeFromCamp(thing);
+window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
+window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
