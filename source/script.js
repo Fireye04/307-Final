@@ -94,5 +94,5 @@ function removeFromCamp(thing) {
 }
 
 window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
-window.removeFromCamp = (thing = "") => setTAC(thing);
+window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
