@@ -242,7 +242,7 @@ They survey their camp. Time to pack up.
 to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once again surveying the remaining campsite.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if sessionStorage.thingsAtCamp.length gt 0&gt;&gt;
 &lt;&lt;for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++&gt;&gt;
-&lt;&lt;= sessionStorage.thingsAtCamp[_i].getDescription()&gt;&gt;
+&lt;&lt;= State.getVar(thingsAtCamp)[_i].getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;&lt;&lt;else&gt;&gt;
 [[Time to go|leave-start]].
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="campfire" tags="" position="850,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their campfire.
