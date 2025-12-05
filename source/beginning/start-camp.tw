@@ -1,0 +1,45 @@
+/* Handles first camp pack up -> tbd
+* from: wake
+*/
+
+:: start-camp
+<<run window.setTAC()>>
+They survey their camp. Time to pack up.
+
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>>
+
+:: mid-cleanup
+<<if $currentWeather === "rainy">>They once again survey the remaining campsite 
+to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
+<<if $thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>><<else>>
+[[Time to go|leave-start]].
+<</if>>
+
+:: campfire
+
+The wanderer [[clears up|mid-cleanup]] their campfire.
+<<run window.removeFromCamp("campfire")>>
+
+:: tent
+
+The wanderer [[clears up|mid-cleanup]] their tent.
+<<run window.removeFromCamp("tent")>>
+
+:: pack
+
+The wanderer [[clears up|mid-cleanup]] their pack.
+<<run window.removeFromCamp("pack")>>
+
+:: neal
+/*TODO: Make an npc make this comment*/
+The wanderer <<linkreplace "pats">>
+You were gonna call your horse a good boy, right?
+<</linkreplace>> Neal. 
+
+[["good boy."|mid-cleanup]] the wanderer says warmly.
+<<run window.removeFromCamp("neal")>>

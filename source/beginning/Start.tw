@@ -1,0 +1,45 @@
+/* Handles Dream sequence -> wake 
+* Starting Node
+*/
+
+:: Start
+Lightning crackles across the sky.
+
+The nightly screams 
+assault 
+the wanderer's mental fortress 
+once again.
+
+[[They Endure|endure]]
+[[They Relent|relent]]
+
+:: endure
+<<run window.setIsEnduring(true)>>
+Their focus redoubles as the walls are pommeled 
+again 
+and again, 
+grimacing with each subsequent impact.
+
+And moment by moment the wanderer endures,
+slowly but surely 
+making it 
+[[through the night|wake]].
+
+:: relent
+<<run window.setIsEnduring(false)>>
+Exhausted, they lower their barriers,
+allowing the voices
+to rush inside. 
+
+They collapse 
+backwards 
+as 
+the screams 
+begin 
+to tear 
+them 
+to shreds 
+once again.
+[[As they deserve|wake]].
+
+
