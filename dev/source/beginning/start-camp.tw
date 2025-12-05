@@ -6,15 +6,15 @@
 <<run window.setTAC()>>
 They survey their camp. Time to pack up.
 
-<<for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++>>
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= State.getVar(thingsAtCamp)[_i].getDescription()>>
 <</for>>
 
 :: mid-cleanup
-<<if sessionStorage.currentWeather === "rainy">>They once again survey the remaining campsite 
+<<if $currentWeather === "rainy">>They once again survey the remaining campsite 
 to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
-<<if sessionStorage.thingsAtCamp.length gt 0>>
-<<for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++>>
+<<if $thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= State.getVar(thingsAtCamp)[_i].getDescription()>>
 <</for>><<else>>
 [[Time to go|leave-start]].

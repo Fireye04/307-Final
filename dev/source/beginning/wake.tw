@@ -5,7 +5,7 @@
 :: wake
 The wanderer wakes in their tent exhausted.
 <<run newWeather()>>
-<<if sessionStorage.currentWeather === "rainy">>The sag in the roof of their tent and steady 
+<<if $currentWeather === "rainy">>The sag in the roof of their tent and steady 
 drip, 
 drip, 
 drip
@@ -18,7 +18,7 @@ like [[Mac]] had always told them.
 With a shaky sigh, they [[exit the tent|start-camp]]<<else>>. 
 
 They shoulder the entrance flap aside and [[exit the tent|start-camp]] with a sigh<</if>>.
-<<elseif sessionStorage.currentWeather === "sunny">>The first rays of sun 
+<<elseif $currentWeather === "sunny">>The first rays of sun 
 creep in 
 through a crack in the entrance, 
 casting the hazy shadow of a tree branch on the wall opposite.<<if not $endured>>
