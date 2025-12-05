@@ -4,7 +4,6 @@
 
 :: Start
 Lightning crackles across the sky.
-bob``
 
 The nightly screams 
 assault 
@@ -15,7 +14,7 @@ once again.
 [[They Relent|relent]]
 
 :: endure
-<<set window.setIsEnduring(true)>>
+<<set sessionStorage.setIsEnduring(true)>>
 Their focus redoubles as the walls are pommeled 
 again 
 and again, 
@@ -27,7 +26,7 @@ making it
 [[through the night|wake]].
 
 :: relent
-<<set window.setIsEnduring(false)>>
+<<set sessionStorage.setIsEnduring(false)>>
 Exhausted, they lower their barriers,
 allowing the voices
 to rush inside. 

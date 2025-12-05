@@ -7,10 +7,10 @@ config.history.controls = false;
 */
 
 /********GLOBALS********/
-window.endureCount = 0;
-window.enduring = false;
-window.currentWeather = "sunny";
-window.thingsAtCamp = [];
+sessionStorage.endureCount = 0;
+sessionStorage.enduring = false;
+sessionStorage.currentWeather = "sunny";
+sessionStorage.thingsAtCamp = [];
 
 
 /********STRUCTS********/
@@ -24,16 +24,16 @@ class thingAtCamp {
     }
 
     getDescription(){
-        if (window.currentWeather === "sunny" && window.enduring === true) {
+        if (sessionStorage.currentWeather === "sunny" && sessionStorage.enduring === true) {
             return this.enduredSunnyDesc;
 
-        } else if (window.currentWeather === "rainy" && window.enduring === true) {
+        } else if (sessionStorage.currentWeather === "rainy" && sessionStorage.enduring === true) {
             return this.enduredRainyDesc;
 
-        } else if (window.currentWeather === "sunny" && window.enduring === false) {
+        } else if (sessionStorage.currentWeather === "sunny" && sessionStorage.enduring === false) {
             return this.sunnyDesc;
 
-        } else if (window.currentWeather === "rainy" && window.enduring === false) {
+        } else if (sessionStorage.currentWeather === "rainy" && sessionStorage.enduring === false) {
             return this.rainyDesc;
 
         } else {
@@ -46,13 +46,13 @@ class thingAtCamp {
 /********ENDURING********/
 
 function setIsEnduring(choice) {
-    window.enduring = choice;
+    sessionStorage.enduring = choice;
     if (choice) {
-        window.endureCount ++;
+        sessionStorage.endureCount ++;
     }
 }
 
-window.setIsEnduring = (choice) => setIsEnduring(choice);
+sessionStorage.setIsEnduring = (choice) => setIsEnduring(choice);
 
 
 /********WEATHER********/
@@ -60,9 +60,9 @@ window.setIsEnduring = (choice) => setIsEnduring(choice);
 function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
-    window.currentWeather = options[roll];
+    sessionStorage.currentWeather = options[roll];
 }
-window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
+sessionStorage.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 
 /********THINGS AT CAMP********/
@@ -76,23 +76,23 @@ var thingsAtCampDefault = [campfire, tent, pack, neal];
 
 function setTAC(things, noDefaults) {
     if (noDefaults) {
-        window.thingsAtCamp = things;
+        sessionStorage.thingsAtCamp = things;
 
     } else {
-        window.thingsAtCamp = thingsAtCampDefault;
-        window.thingsAtCamp.concat(things);
+        sessionStorage.thingsAtCamp = thingsAtCampDefault;
+        sessionStorage.thingsAtCamp.concat(things);
     }
 }
 
 function removeFromCamp(thing) {
-    for (let i = 0; i < window.thingsAtCamp.length; i++) {
-        if (window.thingsAtCamp[i].name === thing) {
-            window.thingsAtCamp.splice(i, 1);
+    for (let i = 0; i < sessionStorage.thingsAtCamp.length; i++) {
+        if (sessionStorage.thingsAtCamp[i].name === thing) {
+            sessionStorage.thingsAtCamp.splice(i, 1);
             break;
         }
     }
 }
 
-window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
-window.removeFromCamp = (thing = "") => removeFromCamp(thing);
+sessionStorage.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
+sessionStorage.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
