@@ -237,7 +237,7 @@ once again.
 They survey their camp. Time to pack up.
 
 &lt;&lt;for _i to 0; _i lt sessionStorage.thingsAtCamp.length; _i++&gt;&gt;
-&lt;&lt;= sessionStorage.thingsAtCamp[_i].getDescription()&gt;&gt;
+&lt;&lt;= State.getVar(thingsAtCamp)[_i].getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="mid-cleanup" tags="" position="725,100" size="100,100">&lt;&lt;if sessionStorage.currentWeather === &quot;rainy&quot;&gt;&gt;They once again survey the remaining campsite 
 to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once again surveying the remaining campsite.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if sessionStorage.thingsAtCamp.length gt 0&gt;&gt;
