@@ -10,4 +10,7 @@
 306 Final
 
 :: StoryInit
-
+<<set $endureCount to 0>>
+<<set $enduring to false>>
+<<set $currentWeather to "sunny">>
+<<set $thingsAtCamp to []>>
