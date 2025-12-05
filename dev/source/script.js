@@ -6,11 +6,6 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-/********GLOBALS********/
-sessionStorage.endureCount = 0;
-sessionStorage.enduring = false;
-sessionStorage.currentWeather = "sunny";
-sessionStorage.thingsAtCamp = [];
 
 
 /********STRUCTS********/
@@ -24,16 +19,16 @@ class thingAtCamp {
     }
 
     getDescription(){
-        if (sessionStorage.currentWeather === "sunny" && sessionStorage.enduring === true) {
+        if (variables().currentWeather === "sunny" && variables().enduring === true) {
             return this.enduredSunnyDesc;
 
-        } else if (sessionStorage.currentWeather === "rainy" && sessionStorage.enduring === true) {
+        } else if (variables().currentWeather === "rainy" && variables().enduring === true) {
             return this.enduredRainyDesc;
 
-        } else if (sessionStorage.currentWeather === "sunny" && sessionStorage.enduring === false) {
+        } else if (variables().currentWeather === "sunny" && variables().enduring === false) {
             return this.sunnyDesc;
 
-        } else if (sessionStorage.currentWeather === "rainy" && sessionStorage.enduring === false) {
+        } else if (variables().currentWeather === "rainy" && variables().enduring === false) {
             return this.rainyDesc;
 
         } else {
@@ -46,9 +41,9 @@ class thingAtCamp {
 /********ENDURING********/
 
 function setIsEnduring(choice) {
-    sessionStorage.enduring = choice;
+    variables().enduring = choice;
     if (choice) {
-        sessionStorage.endureCount ++;
+        variables().endureCount ++;
     }
 }
 
@@ -60,7 +55,7 @@ window.setIsEnduring = (choice) => setIsEnduring(choice);
 function newWeather(options) {
     const roll = Math.floor(Math.random() * (options.length-1) + 0.5);
 
-    sessionStorage.currentWeather = options[roll];
+    variables().currentWeather = options[roll];
 }
 window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
@@ -76,18 +71,18 @@ var thingsAtCampDefault = [campfire, tent, pack, neal];
 
 function setTAC(things, noDefaults) {
     if (noDefaults) {
-        sessionStorage.thingsAtCamp = things;
+        variables().thingsAtCamp = things;
 
     } else {
-        sessionStorage.thingsAtCamp = thingsAtCampDefault;
-        sessionStorage.thingsAtCamp.concat(things);
+        variables().thingsAtCamp = thingsAtCampDefault;
+        variables().thingsAtCamp.concat(things);
     }
 }
 
 function removeFromCamp(thing) {
-    for (let i = 0; i < sessionStorage.thingsAtCamp.length; i++) {
-        if (sessionStorage.thingsAtCamp[i].name === thing) {
-            sessionStorage.thingsAtCamp.splice(i, 1);
+    for (let i = 0; i < variables().thingsAtCamp.length; i++) {
+        if (variables().thingsAtCamp[i].name === thing) {
+            variables().thingsAtCamp.splice(i, 1);
             break;
         }
     }
