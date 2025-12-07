@@ -14,7 +14,7 @@ once again.
 [[They Relent|relent]]
 
 :: endure
-<<run window.setIsEnduring(true)>>
+<<set $enduring to true>>
 Their focus redoubles as the walls are pommeled 
 again 
 and again, 
@@ -26,7 +26,7 @@ making it
 [[through the night|wake]].
 
 :: relent
-<<run window.setIsEnduring(false)>>
+<<set $enduring to false>>
 Exhausted, they lower their barriers,
 allowing the voices
 to rush inside. 

@@ -14,3 +14,6 @@
 <<set $enduring to false>>
 <<set $currentWeather to "sunny">>
 <<set $thingsAtCamp to []>>
+<<set $encounters to []>>
+<<set $currentEncounter to "none">>
+<<run window.setEncounters()>>

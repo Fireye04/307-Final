@@ -37,6 +37,26 @@ class thingAtCamp {
     }
 }
 
+class encounter {
+    constructor(itemName, priority = 1 ?? 1, condition = () => {true}, runcompleted = () => {}) {
+        this.name = itemName;
+        this.priority = priority;
+        this.condition = condition;
+        this.runcompleted = runcompleted;
+        this.used = false;
+
+    }
+
+    available() {
+        return this.condition() && used == false;
+    }
+
+    onCompleted() {
+        this.used = true;
+        this.runcompleted()
+    }
+}
+
 
 /********ENDURING********/
 
@@ -90,4 +110,32 @@ function removeFromCamp(thing) {
 
 window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
 window.removeFromCamp = (thing = "") => removeFromCamp(thing);
+
+
+/********ENCOUNTERS********/
+
+let search_party = new encounter("search-party");
+let search_party2 = new encounter("search-party2", null,() => {hasVisited("search-party")});
+
+var encountersDefault = [search_party, search_party2];
+
+function setEncounters() {
+    variables().encounters = encountersDefault;
+}
+
+function selectEncounter() {
+    let temp = [];
+    for (let i = 0; i < variables().encounters.length; i++) {
+        let cur = variables().encounters[i];
+        if (cur.available()) {
+        temp.push(cur);
+        }
+    }
+    let target = temp.random();
+    variables().currentEncounter = target;
+}
+
+window.setEncounters() = () => setEncounters();
+
+window.selectEncounter() = () => selectEncounter();
 

@@ -1,0 +1,12 @@
+/* handles ingress and egress of one encounter
+To add another encounter, make sure to create a new encounter object alongside it in script.js
+*/
+
+:: run-encounter
+
+<<run window.selectEncounter()>>
+The wanderer [[sets off|$currentEncounter.name]]<<if $currentWeather === "rainy">> into the clouded.<<else>> into the sunny morning.<</if>>
+
+:: end-encounter
+/*TODO: run onCompleted()*/
+
