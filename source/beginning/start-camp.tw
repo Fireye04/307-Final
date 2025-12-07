@@ -17,7 +17,7 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= $thingsAtCamp[_i].getDescription()>>
 <</for>><<else>>
-[[Time to go|leave-start]].
+[[Time to go|run-encounter]].
 <</if>>
 
 :: campfire
@@ -36,10 +36,8 @@ The wanderer [[clears up|mid-cleanup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
 :: neal
-/*TODO: Make an npc make this comment*/
-The wanderer <<linkreplace "pats">>
-You were gonna call your horse a good boy, right?
-<</linkreplace>> Neal. 
+The wanderer pats Neal. 
 
 [["good boy."|mid-cleanup]] the wanderer says warmly.
 <<run window.removeFromCamp("neal")>>
+
