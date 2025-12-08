@@ -125,7 +125,7 @@ function setEncounters() {
 
 function selectEncounter() {
     let temp = [];
-    for (let i = 0; i < variables().encounters.length; i++) {
+    for (let i = 0; i < variables().encounters.length-1; i++) {
         let cur = variables().encounters[i];
         if (cur.available()) {
         temp.push(cur);
