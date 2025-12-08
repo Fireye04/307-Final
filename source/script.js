@@ -135,7 +135,7 @@ function selectEncounter() {
     variables().currentEncounter = target;
 }
 
-window.setEncounters() = () => setEncounters();
+window.setEncounters = () => setEncounters();
 
-window.selectEncounter() = () => selectEncounter();
+window.selectEncounter = () => selectEncounter();
 
