@@ -3,7 +3,6 @@
 */
 
 :: Start
-<<run window.setEncounters()>>
 Lightning crackles across the sky.
 
 The nightly screams 
