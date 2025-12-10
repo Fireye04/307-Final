@@ -221,7 +221,7 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 /********ENCOUNTERS********/
 
 let search_party = new encounter("search-party");
-let search_party2 = new encounter("search-party2", null,() => {hasVisited("search-party")});
+let search_party2 = new encounter("search-party2",1, null,() => {hasVisited("search-party")});
 
 var encountersDefault = [search_party, search_party2];
 
