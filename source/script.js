@@ -123,7 +123,7 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 /********ENCOUNTERS********/
 
 let search_party = new encounter("search-party", 1, () => {true}, () => {});
-let search_party2 = new encounter("search-party2",3, () => {hasVisited("search-party")}, () => {});
+let search_party2 = new encounter("search-party2",3, () => { false /*hasVisited("search-party")*/}, () => {});
 
 var encountersDefault = [search_party, search_party2];
 
@@ -137,7 +137,7 @@ function selectEncounter() {
         let cur = variables().encounters[i];
         console.log(cur.name);
         if (cur.available()) {
-        temp.push(cur);
+            temp.push(cur);
         }
     }
     let index = Math.floor(Math.random() * temp.length);
