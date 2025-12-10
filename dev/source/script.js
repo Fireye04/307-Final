@@ -140,7 +140,8 @@ function selectEncounter() {
         temp.push(cur);
         }
     }
-    let target = temp.random();
+    let index = Math.floor(Math.random() * a.length);
+    let target = temp[index];
     variables().currentEncounter = target;
 }
 
