@@ -141,6 +141,7 @@ function selectEncounter() {
     }
     let index = Math.floor(Math.random() * temp.length);
         console.log(index);
+        console.log(temp);
     let target = temp[index];
         console.log(target.name);
     variables().currentEncounter = target;
