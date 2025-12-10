@@ -329,7 +329,8 @@ She was always the early riser.
 They could still hear the echoes of her shouting to wake up through the tent&#39;s entrance.
 The wanderer was never a morning person.
 
-With a morose sigh and a subsequent yawn, they [[shoulder aside the tent&#39;s entrance flap|start-camp]].</tw-passagedata><tw-passagedata pid="13" name="run-encounter" tags="" position="350,225" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
+With a morose sigh and a subsequent yawn, they [[shoulder aside the tent&#39;s entrance flap|start-camp]].</tw-passagedata><tw-passagedata pid="13" name="run-encounter" tags="" position="350,225" size="100,100">&lt;&lt;= $encounters &gt;&gt;
+&lt;&lt;run window.selectEncounter()&gt;&gt;
 The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="end-encounter" tags="" position="475,225" size="100,100">/*TODO: run onCompleted()*/</tw-passagedata><tw-passagedata pid="15" name="search-party" tags="" position="600,225" size="100,100">search party 1</tw-passagedata><tw-passagedata pid="16" name="search-party2" tags="" position="725,225" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="17" name="StoryInit" tags="" position="850,225" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;
 &lt;&lt;set $enduring to false&gt;&gt;
 &lt;&lt;set $currentWeather to &quot;sunny&quot;&gt;&gt;

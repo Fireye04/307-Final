@@ -4,6 +4,7 @@ To add another encounter, make sure to create a new encounter object alongside i
 
 :: run-encounter
 
+<<= $encounters >>
 <<run window.selectEncounter()>>
 The wanderer <<link "sets off" $currentEncounter.name>><</link>><<if $currentWeather === "rainy">> into the clouded.<<else>> into the sunny morning.<</if>>
 
