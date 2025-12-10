@@ -239,15 +239,16 @@ function setEncounters() {
 
 function selectEncounter() {
     let temp = [];
-    for (let i = 0; i < variables().encounters.length-1; i++) {
+    for (let i = 0; i < variables().encounters.length; i++) {
         let cur = variables().encounters[i];
-        console.log(cur.name);
         if (cur.available()) {
             temp.push(cur);
         }
     }
     let index = Math.floor(Math.random() * temp.length);
+        console.log(index);
     let target = temp[index];
+        console.log(target.name);
     variables().currentEncounter = target;
 }
 
