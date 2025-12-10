@@ -133,9 +133,11 @@ function setEncounters() {
 
 function selectEncounter() {
     let temp = [];
+        console.log(variables.encounters());
     for (let i = 0; i < variables().encounters.length; i++) {
         let cur = variables().encounters[i];
         if (cur.available()) {
+        console.log(cur.name);
             temp.push(cur);
         }
     }
