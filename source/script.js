@@ -38,17 +38,25 @@ class thingAtCamp {
 }
 
 class encounter {
-    constructor(itemName, priority = 1 ?? 1, condition = () => {true}, runcompleted = () => {}) {
+    constructor(itemName, priority = 1, condition = null, runcompleted = null) {
         this.name = itemName;
         this.priority = priority;
-        this.condition = condition;
-        this.runcompleted = runcompleted;
+        if (condition === null) {
+            this.condition = () => {true};
+        } else {
+            this.condition = condition;
+        }
+        if (runcompleted === null) {
+            this.runcompleted = () => {};
+        } else {
+            this.runcompleted = runcompleted;
+        }
         this.used = false;
 
     }
 
     available() {
-        return this.condition() && used == false;
+        return this.condition() && this.used === false;
     }
 
     onCompleted() {
@@ -114,8 +122,8 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
 /********ENCOUNTERS********/
 
-let search_party = new encounter("search-party");
-let search_party2 = new encounter("search-party2",1, null,() => {hasVisited("search-party")});
+let search_party = new encounter("search-party", 1, () => {true}, () => {});
+let search_party2 = new encounter("search-party2",3, () => {hasVisited("search-party")}, () => {});
 
 var encountersDefault = [search_party, search_party2];
 
