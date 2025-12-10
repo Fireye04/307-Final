@@ -122,10 +122,10 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
 /********ENCOUNTERS********/
 
-let search_party = new encounter("search-party", 1, () => {true}, () => {});
-let search_party2 = new encounter("search-party2",3, () => { false /*hasVisited("search-party")*/}, () => {});
+const search_party = new encounter("search-party", 1, () => {true}, () => {});
+const search_party2 = new encounter("search-party2",3, () => { false /*hasVisited("search-party")*/}, () => {});
 
-var encountersDefault = [search_party, search_party2];
+const encountersDefault = [search_party, search_party2];
 
 function setEncounters() {
     variables().encounters = encountersDefault;
