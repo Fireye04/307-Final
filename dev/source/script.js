@@ -120,8 +120,8 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
 /********ENCOUNTERS********/
 
-const search_party = new encounter("search-party", 1, () => {true}, () => {});
-const search_party2 = new encounter("search-party2",3, () => { false /*hasVisited("search-party")*/}, () => {});
+const search_party = new encounter("search-party", 1, () => {return true}, () => {});
+const search_party2 = new encounter("search-party2",3, () => { return false /*hasVisited("search-party")*/}, () => {});
 
 const encountersDefault = [search_party, search_party2];
 
