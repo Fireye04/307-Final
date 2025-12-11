@@ -42,7 +42,7 @@ class encounter {
         this.name = itemName;
         this.priority = priority;
         if (condition === null) {
-            this.condition = () => {true};
+            this.condition = () => {return true;};
         } else {
             this.condition = condition;
         }
@@ -54,7 +54,7 @@ class encounter {
         this.used = false;
 
         // what the fuck javascript
-        this.available = () => {return this.condition() && this.used === false}
+        this.available = () => {return this.condition() && this.used === false;}
         this.onCompleted = () => {
             this.used = true;
             this.runcompleted()
