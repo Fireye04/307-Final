@@ -1,0 +1,19 @@
+/*the wanderer finds a slaughtered buffalo /V*/
+
+:: buffalo
+
+/*TODO: weather states*/
+The wanderer spots a vulture. <<if not $endured>>
+
+Vivian sits atop her horse, Scout, next to them.
+
+"Vultures are.." she starts--
+
+"Nature's guides" the two finish together. 
+Vivian nods, satisfied.
+
+The two lock eyes for a moment before the wanderer snaps their head forward once again.
+
+The wanderer gestures Neal forward, following the vulture in their solitary silence.<<else>>
+/*TODO: endure states*/
+<</if>>

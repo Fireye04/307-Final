@@ -50,6 +50,10 @@ Actual story beats are a function of days passed and Endurance count. Could also
 
 Portly, middle aged man. Cook and former blacksmith. Enchanted with the process of a craft and absolutely loves to teach. 
 
-### Vivian
+### Fala
 
-Hunter, trapper. 
+Tall, athletic woman. Hunter, trapper. Assertive, slow to trust, and smart. Has a soft spot for nature & those who treat it with due respect.
+
+Horse- Nodin
+
+## Nickel
