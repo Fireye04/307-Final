@@ -54,7 +54,7 @@ class encounter {
         this.used = false;
 
         // what the fuck javascript
-        this.available = () => {this.condition() && this.used === false}
+        this.available = () => {return this.condition() && this.used === false}
         this.onCompleted = () => {
             this.used = true;
             this.runcompleted()
