@@ -258,7 +258,7 @@ window.setEncounters = () => setEncounters();
 
 window.selectEncounter = () => selectEncounter();
 
-</script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">[[shortcut|run-encounter]]
+</script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">[[shortcut|fala-1]]
 
 Lightning crackles across the sky.
 
@@ -329,7 +329,7 @@ creep in
 through a crack in the entrance, 
 casting the hazy shadow of a tree branch on the wall opposite.&lt;&lt;if not $endured&gt;&gt;
 
-The shadow reminds them of [[Vivian]], standing just outside the tent as she used to.
+The shadow reminds them of [[Fala]], standing just outside the tent as she used to.
 
 They get dressed with a sigh and [[make their way out of the tent|start-camp]]&lt;&lt;else&gt;&gt;
 
@@ -339,14 +339,36 @@ They get dressed with a sigh and [[make their way out of the tent|start-camp]]&l
 The man started each day with a smile and a cauldron of simmering soup for the camp. 
 The wanderer had looked up to him.
 
-With a morose sigh and a small grumble from their stomach, they [[shoulder aside the tent&#39;s entrance flap|start-camp]] their mind on soup and camaraderie.</tw-passagedata><tw-passagedata pid="12" name="Vivian" tags="" position="225,225" size="100,100">Vivian. 
+With a morose sigh and a small grumble from their stomach, they [[shoulder aside the tent&#39;s entrance flap|start-camp]] their mind on soup and camaraderie.</tw-passagedata><tw-passagedata pid="12" name="Fala" tags="" position="225,225" size="100,100">Fala. 
 She was always the early riser. 
 They could still hear the echoes of her shouting to wake up through the tent&#39;s entrance.
 The wanderer was never a morning person.
 
-With a morose sigh and a subsequent yawn, they [[shoulder aside the tent&#39;s entrance flap|start-camp]].</tw-passagedata><tw-passagedata pid="13" name="run-encounter" tags="" position="350,225" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
+With a morose sigh and a subsequent yawn, they [[shoulder aside the tent&#39;s entrance flap|start-camp]].</tw-passagedata><tw-passagedata pid="13" name="fala-1" tags="" position="350,225" size="100,100">&quot;Wrong.&quot; Fala snatched the bow from their hands.
+
+They knew the drill; 
+they dropped to the ground, &lt;&lt;linkappend &quot;counting&quot;&gt;&gt;&lt;&lt;linkappend &quot;out&quot;&gt;&gt;&lt;&lt;linkappend &quot;each&quot;&gt;&gt;&lt;&lt;linkappend &quot;push-up&quot;&gt;&gt; as it came, 
+trying to minimize the grunts of effort as their weak arms began to [[reach their limit.|done]]&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="done" tags="" position="475,225" size="100,100">&quot;Good. Now fetch your arrows.&quot; 
+Fala sat back down onto her stump, picking up her whittling knife and wooden block.
+
+They pondered asking her what she was making as they walked towards the tree in which the majority of their arrows were buried.
+After a good amount of digging around in the backwood of the forest, they returned with most of the arrows intact</tw-passagedata><tw-passagedata pid="15" name="buffalo" tags="" position="600,225" size="100,100">/*TODO: weather states*/
+The wanderer spots a vulture. &lt;&lt;if not $endured&gt;&gt;
+
+Vivian sits atop her horse, Scout, next to them.
+
+&quot;Vultures are..&quot; she starts--
+
+&quot;Nature&#39;s guides&quot; the two finish together. 
+Vivian nods, satisfied.
+
+The two lock eyes for a moment before the wanderer snaps their head forward once again.
+
+The wanderer gestures Neal forward, following the vulture in their solitary silence.&lt;&lt;else&gt;&gt;
+/*TODO: endure states*/
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="run-encounter" tags="" position="725,225" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
 &lt;&lt;=$currentEncounter.name&gt;&gt;
-The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="end-encounter" tags="" position="475,225" size="100,100">/*TODO: run onCompleted()*/</tw-passagedata><tw-passagedata pid="15" name="search-party" tags="" position="600,225" size="100,100">search party 1</tw-passagedata><tw-passagedata pid="16" name="search-party2" tags="" position="725,225" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="17" name="StoryInit" tags="" position="850,225" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;
+The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="end-encounter" tags="" position="850,225" size="100,100">/*TODO: run onCompleted()*/</tw-passagedata><tw-passagedata pid="18" name="search-party" tags="" position="975,225" size="100,100">The wanderer crests a hill, noticing a small party of travellers moving their way.</tw-passagedata><tw-passagedata pid="19" name="search-party2" tags="" position="1100,225" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="20" name="StoryInit" tags="" position="1225,225" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;
 &lt;&lt;set $enduring to false&gt;&gt;
 &lt;&lt;set $currentWeather to &quot;sunny&quot;&gt;&gt;
 &lt;&lt;set $thingsAtCamp to []&gt;&gt;
