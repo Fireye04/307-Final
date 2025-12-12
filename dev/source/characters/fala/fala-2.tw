@@ -1,0 +1,64 @@
+/*MAKE SURE TO SET $returnAddress BEFORE CALLING THIS FUNCTION*/
+
+:: fala-2
+
+"No, Mac! Have you lost your damned mind?!" 
+Fala paced around camp, her barely contained frustration apparent. 
+"We're not letting some common street thief..." she sputtered.
+
+"'Ey I'll have you know the kid practically paid fer that sandwitch 'an then some! They're practically a wizard with a hammer..."
+
+"After a couple lessons" Mac whispered, turning to them with a [[wink|mac-wink]]. 
+
+:: fala-wink
+
+They giggled, recalling the numerous misses and fingers slammed along the way. 
+
+All in all though, they had truthfully saved Mac a significant amount of laborous work, 
+and they could tell the man enjoyed his time much more throughout;
+He was a very natural teacher.
+
+Fala opened and closed her mouth making various noises in frustration.
+She had been travelling with Mac for long enough to genuinely care about him, 
+and to her dismay she could see how much having the child around had [[improved his spirits|mac-spirits]].
+
+:: fala-spirits
+
+"Fuuuuuuuck" she finally exhaled. 
+She stomped up to Mac, his bearded face molded to his signature grin.
+
+"Listen here. If you really want to take this child away from their home and put them in harm's way, I guess I can't stop you, but we're doing this MY way, do you hear?"
+
+"Yes ma'am!" Mac shouted gleefully, throwing a playful salute.
+
+Fala exhaled forcefully, massaging her temples with her left hand.
+
+"And you." She turned to Them. "One wrong move and you're [[out of here|mac-outta-here]], you understand?"
+
+:: fala-outta-here
+
+They nodded vigorously. 
+
+"And you understand what you're getting into? Mac and I live off the land. The creature comforts of society can be completely forgotten. You will pull your weight, or we drop you at the next town."
+
+More nodding.
+
+"Very well. There is a stream a quarter mile due west. Take that bucket, and return with water for camp."
+
+"[[Yes ma'am|fala-yes-maam]]" They sqeaked.
+
+:: fala-yes-maam
+
+As They scurried away to grab the water They heard one last exchange between the two.
+
+"Don't ever say I don't do anything for you." Fala.
+
+"Thank you. They just remind me so much of Adam." Mac.
+
+"I can tell." Fala.
+
+They looked back at the two before leaving the clearing: 
+Mac had wrapped Fala in a big bear hug.
+He spotted Their glance and made a thumbs up followed by a shooing motion. 
+
+And <<link "off they went" $returnAddress>><</link>>.
