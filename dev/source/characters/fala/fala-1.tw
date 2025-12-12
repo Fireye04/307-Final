@@ -1,4 +1,4 @@
-/*MAKE SURE TO SET $returnaddress BEFORE CALLING THIS FUNCTION*/
+/*MAKE SURE TO SET $returnAddress BEFORE CALLING THIS FUNCTION*/
 /*TODO: tree clearing image*/
 
 ::fala-1
@@ -64,4 +64,4 @@ Silence broke once again for [[a moment|fala-moment]].
 "I want you to have this." Said Fala finally. 
 She handed them the little wooden bison figurine, placing her hands on top and below theirs, clutching the figurine. 
 
-"Don't follow in your ancestors' <<link "footsteps" $returnaddress>><</link>>, little one." She said finally.
+"Don't follow in your ancestors' <<link "footsteps" $returnAddress>><</link>>, little one." She said finally.

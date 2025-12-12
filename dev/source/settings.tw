@@ -17,3 +17,10 @@
 <<set $encounters to []>>
 <<set $currentEncounter to "none">>
 <<run window.setEncounters()>>
+<<set $returnAddress to "none">>
+<<set $falaTidbits to 0>>
+<<set $macTidbits to 0>>
+
+:: none
+
+Something went horribly wrong, I'm so sorry
