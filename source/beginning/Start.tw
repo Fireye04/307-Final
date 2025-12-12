@@ -4,7 +4,8 @@
 
 :: Start
 
-[[shortcut|fala-1]]
+[[fala|fala-1][$returnAddress to "Start"]]
+[[mac|mac-1][$returnAddress to "Start"]]
 
 Lightning crackles across the sky.
 

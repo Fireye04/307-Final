@@ -1,4 +1,4 @@
-/*MAKE SURE TO SET $returnaddress BEFORE CALLING THIS FUNCTION*/
+/*MAKE SURE TO SET $returnAddress BEFORE CALLING THIS FUNCTION*/
 
 :: mac-1
 
@@ -44,5 +44,5 @@ Their bottom lip began to tremble without permission.
 
 They instantly perked up, quickly wiping away the tears. They nodded vigorously.
 
-"Well then." He said, handing them his hammer. "Hold this for me and <<link "keep up" $returnaddress>><</link>>."
+"Well then." He said, handing them his hammer. "Hold this for me and <<link "keep up" $returnAddress>><</link>>."
 
