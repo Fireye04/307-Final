@@ -4,14 +4,18 @@
 
 :: start-camp
 <<run window.setTAC()>>
-They survey their camp. Time to pack up.
+They survey their camp.
+Havan, their raven, studies them quizzically. <<linkappend "They pet Havan">>
+The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.<</linkappend>>
+
+Time to pack up.
 
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= $thingsAtCamp[_i].getDescription()>>
 <</for>>
 
-:: mid-cleanup
-<<if $currentWeather === "rainy">>They once again survey the remaining campsite 
+:: start-mid-cleanup
+<<if $currentWeather === "rainy">>They once again survey the remaining campsite
 to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
 <<if $thingsAtCamp.length gt 0>>
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
@@ -20,24 +24,25 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 [[Time to go|run-encounter]].
 <</if>>
 
-:: campfire
+/*TODO: Make custom things at camp list for intro THIS IS BORKED*/
+:: start-campfire
 
-The wanderer [[clears up|mid-cleanup]] their campfire.
+The wanderer [[clears up|start-mid-cleanup]] their campfire.
 <<run window.removeFromCamp("campfire")>>
 
-:: tent
+:: start-tent
 
-The wanderer [[clears up|mid-cleanup]] their tent.
+The wanderer [[clears up|start-mid-cleanup]] their tent.
 <<run window.removeFromCamp("tent")>>
 
-:: pack
+:: start-pack
 
-The wanderer [[clears up|mid-cleanup]] their pack.
+The wanderer [[clears up|start-mid-cleanup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
-:: neal
+:: start-neal
 The wanderer pats Neal. 
 
-[["good boy."|mid-cleanup]] the wanderer says warmly.
+[["good boy."|start-mid-cleanup]] the wanderer says warmly.
 <<run window.removeFromCamp("neal")>>
 

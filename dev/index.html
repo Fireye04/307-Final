@@ -292,23 +292,29 @@ them
 to shreds 
 once again.
 [[As they deserve|wake]].</tw-passagedata><tw-passagedata pid="4" name="start-camp" tags="" position="475,100" size="100,100">&lt;&lt;run window.setTAC()&gt;&gt;
-They survey their camp. Time to pack up.
+They survey their camp.
+Havan, their raven, studies them quizzically. &lt;&lt;linkappend &quot;They pet Havan&quot;&gt;&gt;
+The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.&lt;&lt;/linkappend&gt;&gt;
+
+Time to pack up.
 
 &lt;&lt;for _i to 0; _i lt $thingsAtCamp.length; _i++&gt;&gt;
 &lt;&lt;= $thingsAtCamp[_i].getDescription()&gt;&gt;
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="mid-cleanup" tags="" position="600,100" size="100,100">&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt;They once again survey the remaining campsite 
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="start-mid-cleanup" tags="" position="600,100" size="100,100">&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt;They once again survey the remaining campsite
 to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once again surveying the remaining campsite.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $thingsAtCamp.length gt 0&gt;&gt;
 &lt;&lt;for _i to 0; _i lt $thingsAtCamp.length; _i++&gt;&gt;
 &lt;&lt;= $thingsAtCamp[_i].getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;&lt;&lt;else&gt;&gt;
 [[Time to go|run-encounter]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="campfire" tags="" position="725,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their campfire.
-&lt;&lt;run window.removeFromCamp(&quot;campfire&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="tent" tags="" position="850,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their tent.
-&lt;&lt;run window.removeFromCamp(&quot;tent&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="pack" tags="" position="975,100" size="100,100">The wanderer [[clears up|mid-cleanup]] their pack.
-&lt;&lt;run window.removeFromCamp(&quot;pack&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="neal" tags="" position="1100,100" size="100,100">The wanderer pats Neal. 
+&lt;&lt;/if&gt;&gt;
 
-[[&quot;good boy.&quot;|mid-cleanup]] the wanderer says warmly.
+/*TODO: Make custom things at camp list for intro THIS IS BORKED*/</tw-passagedata><tw-passagedata pid="6" name="start-campfire" tags="" position="725,100" size="100,100">The wanderer [[clears up|start-mid-cleanup]] their campfire.
+&lt;&lt;run window.removeFromCamp(&quot;campfire&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="start-tent" tags="" position="850,100" size="100,100">The wanderer [[clears up|start-mid-cleanup]] their tent.
+&lt;&lt;run window.removeFromCamp(&quot;tent&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="start-pack" tags="" position="975,100" size="100,100">The wanderer [[clears up|start-mid-cleanup]] their pack.
+&lt;&lt;run window.removeFromCamp(&quot;pack&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="start-neal" tags="" position="1100,100" size="100,100">The wanderer pats Neal. 
+
+[[&quot;good boy.&quot;|start-mid-cleanup]] the wanderer says warmly.
 &lt;&lt;run window.removeFromCamp(&quot;neal&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="wake" tags="" position="1225,100" size="100,100">The wanderer wakes in their tent exhausted.
 &lt;&lt;run newWeather()&gt;&gt;
 &lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt;The sag in the roof of their tent and steady 
@@ -347,12 +353,75 @@ The wanderer was never a morning person.
 With a morose sigh and a subsequent yawn, they [[shoulder aside the tent&#39;s entrance flap|start-camp]].</tw-passagedata><tw-passagedata pid="13" name="fala-1" tags="" position="350,225" size="100,100">&quot;Wrong.&quot; Fala snatched the bow from their hands.
 
 They knew the drill; 
-they dropped to the ground, &lt;&lt;linkappend &quot;counting&quot;&gt;&gt;&lt;&lt;linkappend &quot;out&quot;&gt;&gt;&lt;&lt;linkappend &quot;each&quot;&gt;&gt;&lt;&lt;linkappend &quot;push-up&quot;&gt;&gt; as it came, 
-trying to minimize the grunts of effort as their weak arms began to [[reach their limit.|done]]&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="done" tags="" position="475,225" size="100,100">&quot;Good. Now fetch your arrows.&quot; 
-Fala sat back down onto her stump, picking up her whittling knife and wooden block.
+they dropped to the ground, &lt;&lt;linkappend &quot;counting&quot;&gt;&gt; &lt;&lt;linkappend &quot;out&quot;&gt;&gt; &lt;&lt;linkappend &quot;each&quot;&gt;&gt; &lt;&lt;linkappend &quot;push-up&quot;&gt;&gt; as it came, 
+trying to minimize the grunts of effort as their weak arms began to [[reach their limit.|fala-done]]&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="fala-done" tags="" position="475,225" size="100,100">&quot;Good. Now fetch your arrows.&quot; 
+Fala sat back down onto her stump, picking up her whittling knife and wooden block. 
+Havan fluttered the clearing, settling on her shoulder.
 
 They pondered asking her what she was making as they walked towards the tree in which the majority of their arrows were buried.
-After a good amount of digging around in the backwood of the forest, they returned with most of the arrows intact</tw-passagedata><tw-passagedata pid="15" name="buffalo" tags="" position="600,225" size="100,100">/*TODO: weather states*/
+After a good amount of digging around in the backwood of the forest, they [[returned|fala-returned]] with most of the arrows intact.</tw-passagedata><tw-passagedata pid="15" name="fala-returned" tags="" position="600,225" size="100,100">&quot;What are you making?&quot;
+
+Fala kept her eyes on her project. &quot;Bison. How many arrows did you [[recover|fala-recover]]?&quot;</tw-passagedata><tw-passagedata pid="16" name="fala-recover" tags="" position="725,225" size="100,100">&quot;Nine. One&#39;s broken.&quot; 
+
+&quot;Hm. We&#39;ll make another at camp tonight. Continue.&quot;
+
+They take aim once again and let loose. 
+Miss.
+
+&quot;Tension comes from the back, not the arms. [[Again|fala-again]].&quot;</tw-passagedata><tw-passagedata pid="17" name="fala-again" tags="" position="850,225" size="100,100">The two were mostly silent on their walk back to camp. 
+
+&quot;The bison are going away.&quot; Fala broke the silence.
+
+&quot;What?&quot;
+
+&quot;You asked what I was carving. I&#39;m carving a bison.&quot; She sighed.
+
+&quot;You&#39;re too young to remember, but when I was a child it was difficult to walk a few hundred paces without seeing a bison. And [[Now|fala-now]]..&quot;</tw-passagedata><tw-passagedata pid="18" name="fala-now" tags="" position="975,225" size="100,100">&quot;Where did they go?&quot;
+
+&quot;Hunted. Their corpses left to rot. Killed for sport. Money. And worst of all, war.&quot;
+
+&quot;War?&quot;
+
+&quot;If you want land, and the people on that land need buffalo to eat, what do you do?&quot; Fala gave an ironic laugh. 
+
+Silence broke once again for [[a moment|fala-moment]].</tw-passagedata><tw-passagedata pid="19" name="fala-moment" tags="" position="1100,225" size="100,100">&quot;I want you to have this.&quot; Said Fala finally. 
+She handed them the little wooden bison figurine, placing her hands on top and below theirs, clutching the figurine. 
+
+&quot;Don&#39;t follow in your ancestors&#39; &lt;&lt;link &quot;footsteps&quot; $returnaddress&gt;&gt;&lt;&lt;/link&gt;&gt;, little one.&quot; She said finally.</tw-passagedata><tw-passagedata pid="20" name="mac-1" tags="" position="1225,225" size="100,100">&quot;Oy, kid! That&#39;s my sandwitch!&quot; 
+
+They didn&#39;t stop to see who was yelling at them, instead taking off at maximum velocity down the nearby alleyway. 
+
+One of the benefits of living in a town along the route to Oregon was that the many passerby had no knowledge of the alleyways, nor that their possessions should be kept within arm&#39;s reach. 
+And they were in no hurry to inform anyone.
+
+The construction worker, hammer still in hand, was keeping up concerningly well, considering his portly appearance.
+
+They turned to dip into a side alley, but instead felt an acute yank on their shirt. 
+
+[[Shit|mac-shit]].</tw-passagedata><tw-passagedata pid="21" name="mac-shit" tags="" position="100,350" size="100,100">They felt themselves get lifted off the ground, and get turned around, face to face with their would-be victim. 
+
+They hadn&#39;t stolen from a black man before-- few made it this far north--, so they had no idea what to expect, especially having been caught this time around. 
+Usually they&#39;d just take a beating, get turned over to the sheriff just to escape later on, or both.
+
+What they hadn&#39;t expected was for the construction worker to catch them, look their ragged clothes and half bite taken out of the sandwitch, place them back down with a sigh and say:
+
+&quot;Ah, fuck it. Keep the sandwitch, kid. Ya need it more than I do.&quot;
+
+They froze, bewildered, as the man turned around and began walking back to the construction site. 
+
+&quot;You&#39;re not turning me in?&quot; 
+
+&quot;Hah!&quot; they turned back around. &quot;I prob&#39;ly like the law less than you do, kiddo.&quot; 
+He paused for a second, thinking.
+&quot;I&#39;m Mac. What&#39;s your [[name|mac-name]]?&quot;</tw-passagedata><tw-passagedata pid="22" name="mac-name" tags="" position="225,350" size="100,100">They could&#39;ve given him the one they was currently using, or even any of the few that they had saved for later, but instead they found themselves saying
+&quot;I don&#39;t have one.&quot; 
+Their bottom lip began to tremble without permission.
+
+&quot;Ey ey no need to cry, kiddo. Ya don&#39;t need a name. &#39;Ere, how &#39;bout I show ya how to use a hammer. Would that make ya feel better?&quot;
+
+They instantly perked up, quickly wiping away the tears. They nodded vigorously.
+
+&quot;Well then.&quot; He said, handing them his hammer. &quot;Hold this for me and &lt;&lt;link &quot;keep up&quot; $returnaddress&gt;&gt;&lt;&lt;/link&gt;&gt;.&quot;</tw-passagedata><tw-passagedata pid="23" name="buffalo" tags="" position="350,350" size="100,100">/*TODO: weather states*/
 The wanderer spots a vulture. &lt;&lt;if not $endured&gt;&gt;
 
 Vivian sits atop her horse, Scout, next to them.
@@ -366,9 +435,9 @@ The two lock eyes for a moment before the wanderer snaps their head forward once
 
 The wanderer gestures Neal forward, following the vulture in their solitary silence.&lt;&lt;else&gt;&gt;
 /*TODO: endure states*/
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="run-encounter" tags="" position="725,225" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="run-encounter" tags="" position="475,350" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
 &lt;&lt;=$currentEncounter.name&gt;&gt;
-The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="end-encounter" tags="" position="850,225" size="100,100">/*TODO: run onCompleted()*/</tw-passagedata><tw-passagedata pid="18" name="search-party" tags="" position="975,225" size="100,100">The wanderer crests a hill, noticing a small party of travellers moving their way.</tw-passagedata><tw-passagedata pid="19" name="search-party2" tags="" position="1100,225" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="20" name="StoryInit" tags="" position="1225,225" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;
+The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="end-encounter" tags="" position="600,350" size="100,100">/*TODO: run onCompleted()*/</tw-passagedata><tw-passagedata pid="26" name="search-party" tags="" position="725,350" size="100,100">The wanderer crests a hill, noticing a small party of travellers moving their way.</tw-passagedata><tw-passagedata pid="27" name="search-party2" tags="" position="850,350" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="28" name="StoryInit" tags="" position="975,350" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;
 &lt;&lt;set $enduring to false&gt;&gt;
 &lt;&lt;set $currentWeather to &quot;sunny&quot;&gt;&gt;
 &lt;&lt;set $thingsAtCamp to []&gt;&gt;
