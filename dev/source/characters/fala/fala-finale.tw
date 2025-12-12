@@ -1,0 +1,15 @@
+/*MAKE SURE TO SET $returnAddress BEFORE CALLING THIS FUNCTION*/
+
+:: fala-finale
+
+"They're here" Fala's quiet but urgent whisper pierced Their dreams like a skewer. 
+In all the years they had travelled together, he had only heard that tone of urgency a handful of times, and only in the most dire of circumstances. 
+
+In other words, shit was about to go down. 
+
+They quickly exited their tent and began to gather their things, when they felt Fala grab their shoulders.
+"No time. [[We go now|fala-now]]".
+
+:: fala-now
+
+""
