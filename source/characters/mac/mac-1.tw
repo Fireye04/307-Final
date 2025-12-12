@@ -24,7 +24,9 @@ Usually they'd just take a beating, get turned over to the sheriff just to escap
 
 What they hadn't expected was for the construction worker to catch them, look their ragged clothes and half bite taken out of the sandwitch, place them back down with a sigh and say:
 
-"Ah, fuck it. Keep the sandwitch, kid. Ya need it more than I do."
+"Ah, [[fuck it|mac-fuck-it]]. Keep the sandwitch, kid. Ya need it more than I do."
+
+:: mac-fuck-it
 
 They froze, bewildered, as the man turned around and began walking back to the construction site. 
 
@@ -40,9 +42,11 @@ They could've given him the one they was currently using, or even any of the few
 "I don't have one." 
 Their bottom lip began to tremble without permission.
 
-"Ey ey no need to cry, kiddo. Ya don't need a name. 'Ere, how 'bout I show ya how to use a hammer. Would that make ya feel better?"
+"Ey ey no need to cry, kiddo. Ya don't need a name. 'Ere, how 'bout I show ya how to use a hammer. Would that make ya [[feel better|mac-better]]?"
+
+:: mac-better
 
 They instantly perked up, quickly wiping away the tears. They nodded vigorously.
 
-"Well then." He said, handing them his hammer. "Hold this for me and <<link "keep up" $returnAddress>><</link>>."
+"Well then." He said with a wink, handing them his hammer. "Hold this for me and <<link "keep up" $returnAddress>><</link>>." 
 
