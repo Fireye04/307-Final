@@ -1,0 +1,48 @@
+/*MAKE SURE TO SET $returnaddress BEFORE CALLING THIS FUNCTION*/
+
+:: mac-1
+
+"Oy, kid! That's my sandwitch!" 
+
+They didn't stop to see who was yelling at them, instead taking off at maximum velocity down the nearby alleyway. 
+
+One of the benefits of living in a town along the route to Oregon was that the many passerby had no knowledge of the alleyways, nor that their possessions should be kept within arm's reach. 
+And they were in no hurry to inform anyone.
+
+The construction worker, hammer still in hand, was keeping up concerningly well, considering his portly appearance.
+
+They turned to dip into a side alley, but instead felt an acute yank on their shirt. 
+
+[[Shit|mac-shit]].
+
+:: mac-shit
+
+They felt themselves get lifted off the ground, and get turned around, face to face with their would-be victim. 
+
+They hadn't stolen from a black man before-- few made it this far north--, so they had no idea what to expect, especially having been caught this time around. 
+Usually they'd just take a beating, get turned over to the sheriff just to escape later on, or both.
+
+What they hadn't expected was for the construction worker to catch them, look their ragged clothes and half bite taken out of the sandwitch, place them back down with a sigh and say:
+
+"Ah, fuck it. Keep the sandwitch, kid. Ya need it more than I do."
+
+They froze, bewildered, as the man turned around and began walking back to the construction site. 
+
+"You're not turning me in?" 
+
+"Hah!" they turned back around. "I prob'ly like the law less than you do, kiddo." 
+He paused for a second, thinking.
+"I'm Mac. What's your [[name|mac-name]]?"
+
+:: mac-name
+
+They could've given him the one they was currently using, or even any of the few that they had saved for later, but instead they found themselves saying
+"I don't have one." 
+Their bottom lip began to tremble without permission.
+
+"Ey ey no need to cry, kiddo. Ya don't need a name. 'Ere, how 'bout I show ya how to use a hammer. Would that make ya feel better?"
+
+They instantly perked up, quickly wiping away the tears. They nodded vigorously.
+
+"Well then." He said, handing them his hammer. "Hold this for me and <<link "keep up" $returnaddress>><</link>>."
+
