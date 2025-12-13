@@ -1,0 +1,48 @@
+/* Handles first camp pack up -> tbd
+* from: wake
+*/
+
+:: camp-morning
+<<run window.setTAC()>>
+They survey their camp.
+Havan, their raven, studies them quizzically. <<linkappend "They pet Havan">>
+The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.<</linkappend>>
+
+Time to pack up.
+
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>>
+
+:: start-mid-cleanup
+<<if $currentWeather === "rainy">>They once again survey the remaining campsite
+to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
+<<if $thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>><<else>>
+[[Time to go|run-encounter]].
+<</if>>
+
+/*TODO: Make custom things at camp list for intro THIS IS BORKED*/
+:: start-campfire
+
+The wanderer [[clears up|start-mid-cleanup]] their campfire.
+<<run window.removeFromCamp("campfire")>>
+
+:: start-tent
+
+The wanderer [[clears up|start-mid-cleanup]] their tent.
+<<run window.removeFromCamp("tent")>>
+
+:: start-pack
+
+The wanderer [[clears up|start-mid-cleanup]] their pack.
+<<run window.removeFromCamp("pack")>>
+
+:: start-neal
+The wanderer pats Neal. 
+
+[["good boy."|start-mid-cleanup]] the wanderer says warmly.
+<<run window.removeFromCamp("neal")>>
+
