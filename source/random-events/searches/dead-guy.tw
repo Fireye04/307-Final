@@ -1,0 +1,27 @@
+:: dead-guy
+
+The wanderer studies the corpse that they've found. 
+
+Its back is up against a tree; the previous owner seems to have died of exhaustion. 
+And not too long ago by the looks of it.
+Havan pecks at its [[bag|dg-bag]].
+
+:: dg-bag
+
+The wanderer does an inventory:
+Some hard tack.
+A slightly-shriveled apple. 
+.36 caliber revolver ammo? Score!
+Razor.
+Small bag containing a small amount of white powder.
+At least a hundred dollars?
+
+
+<<if not $endured>>
+
+
+
+:: dg-looted
+
+:: dg-unlooted
+

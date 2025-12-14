@@ -2,12 +2,7 @@
 * Starting Node
 */
 
-:: Start
-[[mac|mac-1][$returnAddress to "Start"]]
-[[fala|fala-1][$returnAddress to "Start"]]
-[[fala 2|fala-2][$returnAddress to "Start"]]
-[[mac 2|mac-finale][$returnAddress to "Start"]]
-[[finale|fala-finale][$returnAddress to "Start"]]
+:: dream
 
 Lightning crackles across the sky.
 
@@ -16,10 +11,11 @@ assault
 the wanderer's mental fortress 
 once again.
 
-[[They Endure|start-endure]]
-[[They Relent|start-relent]]
+[[They Endure|endure]]
+[[They Relent|relent]]
 
-:: start-endure
+:: endure
+
 <<set $enduring to true>>
 Their focus redoubles as the walls are pommeled 
 again 
@@ -29,9 +25,10 @@ grimacing with each subsequent impact.
 And moment by moment the wanderer endures,
 slowly but surely 
 making it 
-[[through the night|wake]].
+[[through the night|camp-morning]].
 
-:: start-relent
+:: relent
+
 <<set $enduring to false>>
 Exhausted, they lower their barriers,
 allowing the voices
@@ -46,6 +43,6 @@ to tear
 them 
 to shreds 
 once again.
-[[As they deserve|wake]].
+[[As they deserve|camp-morning]].
 
 

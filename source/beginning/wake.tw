@@ -32,6 +32,7 @@ They get dressed with a sigh and [[make their way out of the tent|start-camp]]<<
 <</if>>
 
 :: Mac
+<<set $macTidbits += 1>>
 Mac.
 The man started each day with a smile and a cauldron of simmering soup for the camp. 
 The wanderer had looked up to him.
@@ -39,9 +40,11 @@ The wanderer had looked up to him.
 With a morose sigh and a small grumble from their stomach, they [[shoulder aside the tent's entrance flap|start-camp]] their mind on soup and camaraderie.
 
 :: Fala
+<<set $falaTidbits += 1>>
 Fala. 
 She was always the early riser. 
 They could still hear the echoes of her shouting to wake up through the tent's entrance.
 The wanderer was never a morning person.
 
 With a morose sigh and a subsequent yawn, they [[shoulder aside the tent's entrance flap|start-camp]].
+
