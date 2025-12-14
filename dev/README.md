@@ -54,7 +54,7 @@ Horse - Neal
 
 ### Fala
 
-Tall, athletic woman. Hunter, trapper. Assertive, slow to trust, and smart. Has a soft spot for nature & those who treat it with due respect.
+Tall, athletic woman. Hunter, trapper. Assertive, slow to trust, and smart. Has a soft spot for nature.
 
 Horse- Nodin
 Raven- Havan
@@ -62,5 +62,6 @@ Raven- Havan
 # TODO
 
 - [ ] Add Image(s)
-- [ ] The line: “And that’s when [I/he/she/they/we] knew.”
-- [ ] A construction tool of some kind
+- [x] The line: “And that’s when [I/he/she/they/we] knew.”
+- [x] A construction tool of some kind
+- [ ] Things at camp refactor
