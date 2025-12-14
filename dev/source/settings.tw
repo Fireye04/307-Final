@@ -20,6 +20,7 @@
 <<set $returnAddress to "none">>
 <<set $falaTidbits to 0>>
 <<set $macTidbits to 0>>
+<<set $bisonShot to false>>
 
 :: none
 
