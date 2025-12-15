@@ -5,6 +5,7 @@
 :: wake
 The wanderer wakes in their tent exhausted.
 <<run newWeather()>>
+<<= $endured>>
 <<if $currentWeather === "rainy">>The sag in the roof of their tent and steady 
 drip, 
 drip, 
