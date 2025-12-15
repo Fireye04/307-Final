@@ -12,8 +12,9 @@ drip
 of water suggest that it had rained the night before.
 
 "Shit" they mutter as they get dressed, their clothes soaked from the water that had poured in the tent entrance. 
-They'd have to remember to dig a moat around their tent tomorrow<<if not $endured>>, 
-like [[Mac]] had always told them. 
+<<if not $endured>>They could almost smell some of [[Mac]]'s homemade stew.
+
+Almost.
 
 With a shaky sigh, they [[exit the tent|start-camp]]<<else>>. 
 

@@ -3,39 +3,21 @@
 */
 :: camp-morning 
 <<run newWeather()>>
-<<run window.setTAC()>>
-The wanderer wakes in their tent exhausted.
-<<if $currentWeather === "rainy">>The sag in the roof of their tent and steady 
-drip, 
-drip, 
-drip
-of water suggest that it had rained the night before.
+<<run window.setTAC("morning")>>
+The wanderer wakes in their tent once again.
+<<if $currentWeather === "rainy">>The pitter patter of rain on the roof is calming.
 
-"Shit" they mutter as they get dressed, their clothes soaked from the water that had poured in the tent entrance. 
-They'd have to remember to dig a moat around their tent tomorrow<<if not $endured>>, 
-like [[Mac]] had always told them. 
+They shoulder the entrance flap aside and [[exit the tent|start-camp]]<</if>>.
+<<elseif $currentWeather === "sunny">>The first rays of sun creep in through a crack in the entrance.
 
-With a shaky sigh, they [[exit the tent|start-camp]]<<else>>. 
+Havan pecks them awake.
 
-They shoulder the entrance flap aside and [[exit the tent|start-camp]] with a sigh<</if>>.
-<<elseif $currentWeather === "sunny">>The first rays of sun 
-creep in 
-through a crack in the entrance, 
-casting the hazy shadow of a tree branch on the wall opposite.<<if not $endured>>
-
-The shadow reminds them of [[Fala]], standing just outside the tent as she used to.
-
-They get dressed with a sigh and [[make their way out of the tent|start-camp]]<<else>>
-
-"Nice day out" they muse as they get dressed then [[exit the tent|start-camp]]
+"G'mornin, little guy" they yawn as they get dressed, then [[exit the tent|start-camp]]
 <</if>>
 <</if>>
 
 :: morning-wake
 They survey their camp.
-Havan, their raven, studies them quizzically. <<linkappend "They pet Havan">>
-The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.<</linkappend>>
-
 Time to pack up.
 
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
@@ -55,22 +37,22 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 /*TODO: Make custom things at camp list for intro THIS IS BORKED*/
 :: morning-campfire
 
-The wanderer [[clears up|start-mid-cleanup]] their campfire.
+The wanderer [[clears up|morning-mid-cleanup]] their campfire.
 <<run window.removeFromCamp("campfire")>>
 
 :: morning-tent
 
-The wanderer [[clears up|start-mid-cleanup]] their tent.
+The wanderer [[clears up|morning-mid-cleanup]] their tent.
 <<run window.removeFromCamp("tent")>>
 
 :: morning-pack
 
-The wanderer [[clears up|start-mid-cleanup]] their pack.
+The wanderer [[clears up|morning-mid-cleanup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
 :: morning-neal
 The wanderer pats Neal. 
 
-[["good boy."|start-mid-cleanup]] the wanderer says warmly.
+[["good boy."|morning-mid-cleanup]] the wanderer says warmly.
 <<run window.removeFromCamp("neal")>>
 
