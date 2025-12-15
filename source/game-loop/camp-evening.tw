@@ -3,45 +3,41 @@
 */
 
 :: camp-evening
-<<run window.setTAC()>>
-They survey their camp.
-Havan, their raven, studies them quizzically. <<linkappend "They pet Havan">>
-The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.<</linkappend>>
-
-Time to pack up.
+<<run window.setTAC("evening")>>
+Time to set up camp.
 
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= $thingsAtCamp[_i].getDescription()>>
 <</for>>
 
-:: start-mid-cleanup
+:: end-mid-setup
 <<if $currentWeather === "rainy">>They once again survey the remaining campsite
 to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
 <<if $thingsAtCamp.length gt 0>>
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= $thingsAtCamp[_i].getDescription()>>
 <</for>><<else>>
-[[Time to go|run-encounter]].
+[[Time to sleep|dream]].
 <</if>>
 
-:: start-campfire
+:: end-campfire
 
-The wanderer [[clears up|start-mid-cleanup]] their campfire.
+The wanderer [[sets up|end-mid-setup]] their campfire.
 <<run window.removeFromCamp("campfire")>>
 
-:: start-tent
+:: end-tent
 
-The wanderer [[clears up|start-mid-cleanup]] their tent.
+The wanderer [[sets up|end-mid-setup]] their tent.
 <<run window.removeFromCamp("tent")>>
 
-:: start-pack
+:: end-pack
 
-The wanderer [[clears up|start-mid-cleanup]] their pack.
+The wanderer [[sets up|end-mid-setup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
-:: start-neal
-The wanderer pats Neal. 
+:: end-neal
+The wanderer pats Neal, Setting the horse some hay.
 
-[["good boy."|start-mid-cleanup]] the wanderer says warmly.
+[["good boy."|end-mid-setup]] the wanderer says warmly.
 <<run window.removeFromCamp("neal")>>
 

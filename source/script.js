@@ -88,21 +88,38 @@ window.newWeather = (options = ["rainy", "sunny"]) => newWeather(options);
 
 /********THINGS AT CAMP********/
 
-let campfire = new thingAtCamp("campfire", "The coals of last night's [[campfire]] lay blackened in the camp's fire pit.", "The blackened coals of last night's [[campfire]] lay pooled in the shallow recess of the fire pit.")
-let tent = new thingAtCamp("tent", "The [[tent]] stands stout in the sunlight, a little worse for wear.", "The [[tent]] sags slightly weighted down by the previous night's downpour.")
-let pack = new thingAtCamp("pack", "The [[supply pack|pack]] lays in the shade of a nearby tree.", "The moist [[supply pack|pack]] lays in a stray puddle below a nearby tree")
-let neal = new thingAtCamp("neal", "[[Neal|neal]] stands where he was left the night before calmly cropping a sunny patch of grass.", "[[Neal|neal]] stands below a tree, shuddering slightly as a drip of water falls from the tree onto his neck.")
+let tut_campfire = new thingAtCamp("campfire", "The coals of last night's [[start-campfire]] lay blackened in the camp's fire pit.", "The blackened coals of last night's [[start-campfire]] lay pooled in the shallow recess of the fire pit.")
+let tut_tent = new thingAtCamp("tent", "The [[start-tent]] stands stout in the sunlight, a little worse for wear.", "The [[start-tent]] sags slightly weighted down by the previous night's downpour.")
+let tut_pack = new thingAtCamp("pack", "The [[supply pack|start-pack]] lays in the shade of a nearby tree.", "The moist [[supply pack|start-pack]] lays in a stray puddle below a nearby tree")
+let tut_neal = new thingAtCamp("neal", "[[Neal|start-neal]] stands where he was left the night before calmly cropping a sunny patch of grass.", "[[Neal|start-neal]] stands below a tree, shuddering slightly as a drip of water falls from the tree onto his neck.")
 
-var thingsAtCampDefault = [campfire, tent, pack, neal];
+let morn_campfire = new thingAtCamp("campfire", "The coals of last night's [[morning-campfire]] lay blackened in the camp's fire pit.", "The blackened coals of last night's [[morning-campfire]] lay pooled in the shallow recess of the fire pit.")
+let morn_tent = new thingAtCamp("tent", "The [[morning-tent]] stands stout in the sunlight, a little worse for wear.", "The [[morning-tent]] sags slightly weighted down by the previous night's downpour.")
+let morn_pack = new thingAtCamp("pack", "The [[supply pack|morning-pack]] lays in the shade of a nearby tree.", "The moist [[supply pack|morning-pack]] lays in a stray puddle below a nearby tree")
+let morn_neal = new thingAtCamp("neal", "[[Neal|morning-neal]] stands where he was left the night before calmly cropping a sunny patch of grass.", "[[Neal|morning-neal]] stands below a tree, shuddering slightly as a drip of water falls from the tree onto his neck.")
 
-function setTAC(things, noDefaults) {
-    if (noDefaults) {
-        variables().thingsAtCamp = things;
+let eve_campfire = new thingAtCamp("campfire", "Gather wood & [[light fire|evening-campfire]]")
+let eve_tent = new thingAtCamp("tent", "Set up [[tent|evening-tent]]")
+let eve_pack = new thingAtCamp("pack", "Unpack [[supply pack|evening-pack]]")
+let eve_neal = new thingAtCamp("neal", "Feed [[Neal|start-neal]]")
 
-    } else {
-        variables().thingsAtCamp = thingsAtCampDefault;
-        variables().thingsAtCamp.concat(things);
+
+var thingsAtCampTutorial = [tut_campfire, tut_tent, tut_pack, tut_neal];
+var thingsAtCampMorning = [morn_campfire, morn_tent, morn_pack, morn_neal];
+var thingsAtCampEvening = [eve_campfire, eve_tent, eve_pack, eve_neal];
+
+function setTAC(things) {
+    if (things === "tutorial") {
+        variables().thingsAtCamp = thingsAtCampTutorial;
+
+    }else if (things === "morning") {
+        variables().thingsAtCamp = thingsAtCampMorning;
+
+    }else if (things === "evening") {
+        variables().thingsAtCamp = thingsAtCampEvening;
+
     }
+
 }
 
 function removeFromCamp(thing) {
@@ -114,7 +131,7 @@ function removeFromCamp(thing) {
     }
 }
 
-window.setTAC = (things = thingsAtCampDefault, noDefaults = false) => setTAC(things, noDefaults);
+window.setTAC = (things = "morning") => setTAC(things);
 window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
 
@@ -129,6 +146,7 @@ function setEncounters() {
     variables().encounters = encountersDefault;
 }
 
+// TODO: add weight by priority
 function selectEncounter() {
     let temp = [];
         console.log(variables().encounters);

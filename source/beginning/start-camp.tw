@@ -3,7 +3,7 @@
 */
 
 :: start-camp
-<<run window.setTAC()>>
+<<run window.setTAC("tutorial")>>
 They survey their camp.
 Havan, their raven, studies them quizzically. <<linkappend "They pet Havan">>
 The raven closes its eyes gratefully as the wanderer provides mandatory chin scritches.<</linkappend>>
