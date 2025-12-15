@@ -347,7 +347,7 @@ drip
 of water suggest that it had rained the night before.
 
 &quot;Shit&quot; they mutter as they get dressed, their clothes soaked from the water that had poured in the tent entrance. 
-&lt;&lt;if not $endured&gt;&gt;They could almost smell some of [[Mac]]&#39;s homemade stew.
+&lt;&lt;if $endured is false&gt;&gt;They could almost smell some of [[Mac]]&#39;s homemade stew.
 
 Almost.
 
@@ -357,7 +357,7 @@ They shoulder the entrance flap aside and [[exit the tent|start-camp]] with a si
 &lt;&lt;elseif $currentWeather === &quot;sunny&quot;&gt;&gt;The first rays of sun 
 creep in 
 through a crack in the entrance, 
-casting the hazy shadow of a tree branch on the wall opposite.&lt;&lt;if not $endured&gt;&gt;
+casting the hazy shadow of a tree branch on the wall opposite.&lt;&lt;if $endured is false&gt;&gt;
 
 The shadow reminds them of [[Fala]], standing just outside the tent as she used to.
 
@@ -712,7 +712,7 @@ The wanderer gestures Neal forward, following the vulture in their [[solitary si
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="bison-continue" tags="" position="600,850" size="100,100">The vulture settles down on a rotting bison carcass. And that&#39;s when they knew that the day would not be a good one.
 
 The wanderer reaches into their saddle bag taking out a small, carved wooden bison, 
-feeling the grooves in its side in an attempt to calm themselves down.&lt;&lt;if not $endured&gt;&gt;
+feeling the grooves in its side in an attempt to calm themselves down.&lt;&lt;if $endured is false&gt;&gt;
 
 &quot;You&#39;re no better than them&quot; Fala whispers.
 
@@ -729,7 +729,7 @@ Likely how the pained creature was put out of its misery.
 Taken as prizes, no doubt.
 &lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;
 Liquid blood still pooled &lt;&lt;linkappend &quot;around the beast.&quot;&gt;&gt;
-A day old, maybe less. Their grip on the carving tightens.&lt;&lt;if not $endured&gt;&gt;
+A day old, maybe less. Their grip on the carving tightens.&lt;&lt;if $endured is false&gt;&gt;
 
 &quot;Pretender. Unworthy abandoner.&quot; Fala jeers at them. 
 The wanderer takes a deep breath and concentrates trying to cast her voice out of their brain.
@@ -758,14 +758,14 @@ They sigh, drawing their revolver and [[firing once|bison-fire]] in the air.</tw
 &quot;Remus! Shut the fuck up!&quot; The other looks up at the wanderer, a phony smile on his lips.
 &quot;Sorry, what&#39;s it to you?&quot;
 
-&lt;&lt;if not $endured&gt;&gt;
+&lt;&lt;if $endured is false&gt;&gt;
 [[Shoot them|bison-shoot]]
 [[Spare them|bison-fala-spare]]
 &lt;&lt;else&gt;&gt;
 [[Shoot them|bison-shoot]]
 [[Spare them|bison-spare]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="bison-shoot" tags="" position="1225,850" size="100,100">&lt;&lt;set $bisonShot to true&gt;&gt;
-Four shots echo over the plains.&lt;&lt;if not $endured&gt;&gt;
+Four shots echo over the plains.&lt;&lt;if $endured is false&gt;&gt;
 
 The wanderer feels a hand on their shoulder. Fala.
 
@@ -834,7 +834,7 @@ Small bag containing a small amount of white powder.
 At least a hundred dollars?
 
 
-&lt;&lt;if not $endured&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="dg-looted" tags="" position="1100,975" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="dg-unlooted" tags="" position="1225,975" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="search-party" tags="" position="100,1100" size="100,100">The wanderer crests a hill, noticing a small party of travellers moving their way. 
+&lt;&lt;if $endured is false&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="dg-looted" tags="" position="1100,975" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="dg-unlooted" tags="" position="1225,975" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="search-party" tags="" position="100,1100" size="100,100">The wanderer crests a hill, noticing a small party of travellers moving their way. 
 
 /*lost guy is a chemist who is pen pals with a german chemist named Friedrich Gaedcke in other news he got a small box delivered to him and went crazy
 (cocaine)*/</tw-passagedata><tw-passagedata pid="82" name="search-party2" tags="" position="225,1100" size="100,100">search party 2</tw-passagedata><tw-passagedata pid="83" name="StoryInit" tags="" position="350,1100" size="100,100">&lt;&lt;set $endureCount to 0&gt;&gt;

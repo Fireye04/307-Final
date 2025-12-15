@@ -15,7 +15,7 @@ The wanderer gestures Neal forward, following the vulture in their [[solitary si
 The vulture settles down on a rotting bison carcass. And that's when they knew that the day would not be a good one.
 
 The wanderer reaches into their saddle bag taking out a small, carved wooden bison, 
-feeling the grooves in its side in an attempt to calm themselves down.<<if not $endured>>
+feeling the grooves in its side in an attempt to calm themselves down.<<if $endured is false>>
 
 "You're no better than them" Fala whispers.
 
@@ -36,7 +36,7 @@ Likely how the pained creature was put out of its misery.
 Taken as prizes, no doubt.
 <</linkappend>><</linkappend>>
 Liquid blood still pooled <<linkappend "around the beast.">>
-A day old, maybe less. Their grip on the carving tightens.<<if not $endured>>
+A day old, maybe less. Their grip on the carving tightens.<<if $endured is false>>
 
 "Pretender. Unworthy abandoner." Fala jeers at them. 
 The wanderer takes a deep breath and concentrates trying to cast her voice out of their brain.
@@ -77,7 +77,7 @@ The group shuts up fast.
 "Remus! Shut the fuck up!" The other looks up at the wanderer, a phony smile on his lips.
 "Sorry, what's it to you?"
 
-<<if not $endured>>
+<<if $endured is false>>
 [[Shoot them|bison-shoot]]
 [[Spare them|bison-fala-spare]]
 <<else>>
@@ -88,7 +88,7 @@ The group shuts up fast.
 :: bison-shoot
 
 <<set $bisonShot to true>>
-Four shots echo over the plains.<<if not $endured>>
+Four shots echo over the plains.<<if $endured is false>>
 
 The wanderer feels a hand on their shoulder. Fala.
 

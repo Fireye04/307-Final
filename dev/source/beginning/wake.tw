@@ -13,7 +13,7 @@ drip
 of water suggest that it had rained the night before.
 
 "Shit" they mutter as they get dressed, their clothes soaked from the water that had poured in the tent entrance. 
-<<if not $endured>>They could almost smell some of [[Mac]]'s homemade stew.
+<<if $endured is false>>They could almost smell some of [[Mac]]'s homemade stew.
 
 Almost.
 
@@ -23,7 +23,7 @@ They shoulder the entrance flap aside and [[exit the tent|start-camp]] with a si
 <<elseif $currentWeather === "sunny">>The first rays of sun 
 creep in 
 through a crack in the entrance, 
-casting the hazy shadow of a tree branch on the wall opposite.<<if not $endured>>
+casting the hazy shadow of a tree branch on the wall opposite.<<if $endured is false>>
 
 The shadow reminds them of [[Fala]], standing just outside the tent as she used to.
 
