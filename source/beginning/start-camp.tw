@@ -21,11 +21,18 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 <<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
 <<= $thingsAtCamp[_i].getDescription()>>
 <</for>><<else>>
+<<if $tidbits >= $tidbitCap>>
+<<set $returnAddress to "run-encounter">>
+A ghost of the past creeps up the wanderer's spine. 
+With a gasp, they're consumed by [[a memory|run-backstory]]...
+<<else>>
 [[Time to go|run-encounter]].
+<</if>>
 <</if>>
 
 /*TODO: Make custom things at camp list for intro THIS IS BORKED*/
 :: start-campfire
+
 
 The wanderer [[clears up|start-mid-cleanup]] their campfire.
 <<run window.removeFromCamp("campfire")>>

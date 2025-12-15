@@ -10,6 +10,9 @@
 306 Final
 
 :: StoryInit
+<<set $endureCap = 3>>
+<<set $tidbitCap = 1>>
+
 <<set $endureCount to 0>>
 <<set $enduring to false>>
 <<set $currentWeather to "sunny">>
@@ -18,10 +21,11 @@
 <<set $currentEncounter to "none">>
 <<run window.setEncounters()>>
 <<set $returnAddress to "none">>
-<<set $falaTidbits to 0>>
-<<set $macTidbits to 0>>
+<<set $tidbits to 0>>
 <<set $bisonShot to false>>
+
+<<set $backstories to ["fala-finale", "mac-finale", "fala-2", "fala-1", "mac-1"]>>
 
 :: none
 
-Something went horribly wrong, I'm so sorry
+Something went horribly wrong, I'm so sorry (this is a bug, report it here: https://github.com/Fireye04/307-Final/issues)

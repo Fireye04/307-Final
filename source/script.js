@@ -32,7 +32,7 @@ class thingAtCamp {
             return this.rainyDesc;
 
         } else {
-            return "The traveller glares up at the sky and shakes their fist cursing some unknown god for their shitty programming. (something went wrong and this is an error message, if you're a kind citizen, you can report this at https://github.com/Fireye04/306-Final/issues/new please bring screenshots!)"
+            return "The traveller glares up at the sky and shakes their fist cursing some unknown god for their shitty programming. (something went wrong and this is an error message, if you're a kind citizen, you can report this at https://github.com/Fireye04/307-Final/issues/new please bring screenshots!)"
         }
     }
 }
@@ -63,6 +63,17 @@ class encounter {
     }
 }
 
+class tidbit {
+    constructor(object, text, expanded) {
+        this.object = object;
+        this.text = text;
+        this.expanded = expanded;
+    }
+
+    getDescription(){
+        return "<<linkreplace \"" + this.text + "\">>" + this.expanded + "<</linkreplace>>";
+    }
+}
 
 /********ENDURING********/
 
@@ -170,3 +181,9 @@ window.setEncounters = () => setEncounters();
 
 window.selectEncounter = () => selectEncounter();
 
+
+/********TIDBITS********/
+
+variables().tidbits = [
+    new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman.")
+];
