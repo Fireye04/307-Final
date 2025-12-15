@@ -17,7 +17,7 @@ Small bag containing a small amount of white powder.
 At least a hundred dollars?
 
 
-<<if not $endured>>
+<<if $endured is false>>
 
 
 
