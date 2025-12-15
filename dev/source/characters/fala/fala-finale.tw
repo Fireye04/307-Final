@@ -76,4 +76,4 @@ He was bleeding. A lot.
 
 Mac chuckled silently, that grin on his face to the last.
 
-"<<link "Eat a sandwich" $returnAddress>><</link>> for me, will ya?"
+"<<link "Eat a sandwich" "endscreen">><</link>> for me, will ya?"

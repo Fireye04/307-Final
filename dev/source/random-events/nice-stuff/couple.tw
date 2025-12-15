@@ -1,0 +1,74 @@
+:: couple
+/*TODO: different notice if rainy*/
+The wanderer sights a plume of smoke rising over the plains. 
+No known settlements are nearby as far as they're aware.
+
+They shrug to themselves and [[turn Neal|couple-turn]] in its direction
+
+:: couple-turn
+
+As they approach, they note a half-built wooden cabin in a small clearing, and a couple voices bickering back and forth.
+
+"Another miss? That's it, my turn"
+
+"Aw honey, you think Ms. 'can't hit a deer ten paces in front of her' is gonna do any better?"
+
+"THAT WAS ONE TIME!"
+
+Intrigued, the wanderer dismounts neal and [[circles the cabin|couple-circles]].
+
+:: couple-circles
+
+They find themselves looking at a couple of women fighting over a bow, a small fire behind them.
+The two haven't noticed them yet. 
+
+They chuckle as one holds the bow over her head and the other, a good foot shorter struggles to reach it. 
+
+<<if $endured is false>>They feel Mac's hand on their shoulder.
+
+"You'll never have that, kid." 
+His look is sympathetic, but his words, said so matter-of-factly draw tears to the wanderer's eyes.
+"No, you'd just fuck it up. Like ya did with me and Fala. Better to keep moving"
+
+"[[yeah|couple-yeah]], you're right"<<else>>"[[Need some help?|couple-help]]" They ask.<</if>>
+
+:: couple-help
+
+"Who're you?" The taller one with the bow notches and draws an arrow pointing it at the wanderer.
+
+They chuckle. Judging from the earlier conversation she would almost certainly miss if she tried to shoot.
+"Just a wanderer." They unbuckle their holster, letting the six shooter fall to the ground with a dull *clank*
+"Mean you no harm. Figured I'd offer what little assistance I could to a couple of fellow naturefolk."
+
+The woman considers their words and finally drops the bow. 
+"In exchange for what exactly?"
+
+"Companionship mostly. The hills may be beautiful but they get a bit lonely after a few weeks. Wouldn't feel right to ask anything else of you, especially due to you not knowing how to hunt. Basically a [[death wish|couple-deathwish]] out here."
+
+:: couple-deathwish
+
+And that's when she knew they were right.
+The exhaustion in her eyes that she was hiding up to that point became all to apparent the moment they mentioned hunting.
+
+"Alright. I'll take you at your word. But leave your gun there, hear me?"
+
+"[[As you wish|couple-as-you-wish]]"
+
+:: couple-as-you-wish
+
+<<set $tidbits += 1>>
+The wanderer found their afternoon taken by the odd act of teaching. 
+They felt an odd affinity for the their past in doing so. 
+
+They showed the two how to make traps, stalk prey, and shoot a bow.
+They hoped it would be enough to keep the two alive; 
+It was a miracle they had survived up to that point.
+
+/*TODO: Expand in-scene here*/
+And finally, as the sun set, they said their goodbyes and <<link "set off" $returnAddress>><</link>> to make camp.
+
+:: couple-yeah
+
+With a sigh, the wanderer turns around, remounts Neal, and leaves.
+
+Morosely, they <<link "search" $returnAddress>><</link>> for a good place to set up camp.

@@ -22,10 +22,19 @@ again
 and again, 
 grimacing with each subsequent impact.
 
+<<if $endureCount lt 2>>
 And moment by moment the wanderer endures,
 slowly but surely 
 making it 
 [[through the night|camp-morning]].
+
+<<elseif $endurecount is 2>>
+A loud Crack resounds through the wanderer's bastion.
+They set themselves upon repairing the damaged walls,
+but they can feel the voices [[winning|camp-morning]].
+<<else>>
+And with a loud crash, it all comes [[tumbling down|end-bad]].
+<</if>>
 
 :: relent
 

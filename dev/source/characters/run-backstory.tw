@@ -1,0 +1,15 @@
+::run-backstory
+<<set $tidbits -= 1>><<set $current to $backstories.pop()>>
+<<if $current is "mac-1">>
+They didn't <<link "deserve" $current>><</link>> to meet a guy like Mac.
+<<elseif $current is "fala-1">>
+Fala should've <<link "left them" $current>><</link>> behind.
+<<elseif $current is "fala-2">>
+Fala was the only reason they were <<link "still alive" $current>><</link>> out in the wilds.
+<<elseif $current is "mac-finale">>
+Why did Mac <<link "care more" $current>><</link>> about them than he did himself?
+<<elseif $current is "fala-finale">>
+Fuck fuck fuck fuck <<linkappend "fuck">><<link "FUCK" $current>><</link>><</linkappend>>
+<<else>>
+Something has gone very wrong. (this is a bug, report it here: https://github.com/Fireye04/307-Final/issues)
+<</if>>
