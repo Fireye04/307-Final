@@ -717,6 +717,7 @@ I hope to tie up the many narrative loose ends I left dangling over winter break
 
 Until I do, pretend the real story is the backstories! I was actually able to cook on those, and they&#39;re really the only thing that I&#39;d say is in a presentable state at the moment. (and if you didn&#39;t get any backstories, perhaps let some voices in ehehe)</tw-passagedata><tw-passagedata pid="51" name="camp-evening" tags="" position="100,725" size="100,100">&lt;&lt;set $curentCamp to &quot;end-mid-setup&quot;&gt;&gt;
 &lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.pluckMany(2)&gt;&gt;
+&lt;&lt;else&gt;&gt; &lt;&lt;set $campMutators to []&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;run window.setTAC(&quot;evening&quot;)&gt;&gt;
 Time to set up camp.
@@ -760,6 +761,7 @@ The wanderer pats Neal, Setting the horse some hay.
 
 [[&quot;good boy.&quot;|end-mid-setup]] the wanderer says warmly.
 &lt;&lt;run window.removeFromCamp(&quot;neal&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="camp-morning" tags="" position="850,725" size="100,100">&lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.pluckMany(2)&gt;&gt;
+&lt;&lt;else&gt;&gt; &lt;&lt;set $campMutators to []&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $curentCamp to &quot;morning-mid-setup&quot;&gt;&gt;
 &lt;&lt;run newWeather()&gt;&gt;
@@ -767,13 +769,12 @@ The wanderer pats Neal, Setting the horse some hay.
 The wanderer wakes in their tent once again.
 &lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt;The pitter patter of rain on the roof is calming.
 
-They shoulder the entrance flap aside and [[exit the tent|start-camp]]&lt;&lt;/if&gt;&gt;.
+They shoulder the entrance flap aside and [[exit the tent|start-camp]].
 &lt;&lt;elseif $currentWeather === &quot;sunny&quot;&gt;&gt;The first rays of sun creep in through a crack in the entrance.
 
 Havan pecks them awake.
 
 &quot;G&#39;mornin, little guy&quot; they yawn as they get dressed, then [[exit the tent|start-camp]]
-&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="morning-wake" tags="" position="975,725" size="100,100">They survey their camp.
 Time to pack up.
 
