@@ -733,6 +733,7 @@ to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="end-campfire" tags="" position="350,725" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;campfire&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
@@ -740,6 +741,7 @@ The wanderer [[sets up|end-mid-setup]] their campfire.
 &lt;&lt;run window.removeFromCamp(&quot;campfire&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="end-tent" tags="" position="475,725" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;tent&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
@@ -747,6 +749,7 @@ The wanderer [[sets up|end-mid-setup]] their tent.
 &lt;&lt;run window.removeFromCamp(&quot;tent&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="end-pack" tags="" position="600,725" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;pack&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
@@ -754,6 +757,7 @@ The wanderer [[sets up|end-mid-setup]] their pack.
 &lt;&lt;run window.removeFromCamp(&quot;pack&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="end-neal" tags="" position="725,725" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;neal&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 The wanderer pats Neal, Setting the horse some hay.
@@ -789,24 +793,28 @@ to the calm pattering of a subdued drizzle.&lt;&lt;else&gt;&gt;They squint, once
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="morning-campfire" tags="" position="1225,725" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;campfire&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 The wanderer [[clears up|morning-mid-cleanup]] their campfire.
 &lt;&lt;run window.removeFromCamp(&quot;campfire&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="morning-tent" tags="" position="100,850" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;tent&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 The wanderer [[clears up|morning-mid-cleanup]] their tent.
 &lt;&lt;run window.removeFromCamp(&quot;tent&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="morning-pack" tags="" position="225,850" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;pack&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 The wanderer [[clears up|morning-mid-cleanup]] their pack.
 &lt;&lt;run window.removeFromCamp(&quot;pack&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="morning-neal" tags="" position="350,850" size="100,100">&lt;&lt;set $target to $campMutators.deleteWith(function (val){
 return val.object === &quot;neal&quot;
 })&gt;&gt;&lt;&lt;for _i, _item range $target&gt;&gt;
+&lt;&lt;= $target[_i].getDescription()&gt;&gt;
 &lt;&lt;= _item.getDescription()&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 The wanderer pats Neal. 
