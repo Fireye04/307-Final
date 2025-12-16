@@ -41,7 +41,7 @@ A day old, maybe less. Their grip on the carving tightens.<<if $enduring is fals
 The wanderer takes a deep breath and concentrates trying to cast her voice out of their brain.
 It is not effective.<</if>>
 
-They look around. A plume of smoke [[rises|::bison-rise]], about an hour's ride due northwest.
+They look around. A plume of smoke [[rises|bison-rise]], about an hour's ride due northwest.
 <</linkappend>>
 
 :: bison-rise
