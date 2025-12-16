@@ -16,19 +16,19 @@ once again.
 
 :: endure
 
-<<set $enduring to true>>
+<<run setIsEnduring(true)>>
 Their focus redoubles as the walls are pommeled 
 again 
 and again, 
 grimacing with each subsequent impact.
 
-<<if $endureCount lt 2>>
+<<if $endureCount lt 1>>
 And moment by moment the wanderer endures,
 slowly but surely 
 making it 
 [[through the night|camp-morning]].
 
-<<elseif $endurecount is 2>>
+<<elseif $endurecount is 1>>
 A loud Crack resounds through the wanderer's bastion.
 They set themselves upon repairing the damaged walls,
 but they can feel the voices [[winning|camp-morning]].
@@ -38,7 +38,7 @@ And with a loud crash, it all comes [[tumbling down|end-bad]].
 
 :: relent
 
-<<set $enduring to false>>
+<<run setIsEnduring(false)>>
 Exhausted, they lower their barriers,
 allowing the voices
 to rush inside. 

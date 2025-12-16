@@ -4,7 +4,7 @@
 
 :: camp-evening
 <<set $returnAddress to "end-mid-setup">>
-<<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<<if $enduring is false>><<set $campMutators to $tidbits.randomMany(2)>>
 <<else>> <<set $campMutators to []>>
 <</if>>
 <<run window.setTAC("evening")>>
@@ -37,7 +37,7 @@ The wanderer [[sets up|end-mid-setup]] their campfire.
 
 :: end-tent
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "tent"
+return val.object === "tent";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
@@ -47,7 +47,7 @@ The wanderer [[sets up|end-mid-setup]] their tent.
 
 :: end-pack
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "pack"
+return val.object === "pack";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
@@ -57,7 +57,7 @@ The wanderer [[sets up|end-mid-setup]] their pack.
 
 :: end-neal
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "neal"
+return val.object === "neal";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
