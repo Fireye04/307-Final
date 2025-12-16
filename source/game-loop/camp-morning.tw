@@ -39,7 +39,7 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 
 :: morning-campfire
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "campfire"
+return val.object === "campfire";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
@@ -48,7 +48,7 @@ The wanderer [[clears up|morning-mid-cleanup]] their campfire.
 
 :: morning-tent
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "tent"
+return val.object === "tent";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
@@ -57,7 +57,7 @@ The wanderer [[clears up|morning-mid-cleanup]] their tent.
 
 :: morning-pack
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "pack"
+return val.object === "pack";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
@@ -66,7 +66,7 @@ The wanderer [[clears up|morning-mid-cleanup]] their pack.
 
 :: morning-neal
 <<set $target to $campMutators.deleteWith(function (val){
-return val.object === "neal"
+return val.object === "neal";
 })>><<for _i, _item range $target>>
 <<= _item.getDescription()>>
 <</for>>
