@@ -3,5 +3,5 @@
 The day carries on, Neal trods on, and Havan collects seeds from the various plants that scatter the wilderness. 
 
 /*TODO: like all of this one*/
-<<if $endured is false>><<else>><</if>>
+<<if $enduring is false>><<else>><</if>>
 the wanderer finds themselves once again searching for a place to <<link "set up camp" $returnAddress>><</link>>.  
