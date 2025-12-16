@@ -2,7 +2,7 @@
 * from: wake
 */
 :: camp-morning 
-<<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<<if $enduring is false>><<set $campMutators to $tidbits.randomMany(2)>>
 <<else>> <<set $campMutators to []>>
 <</if>>
 <<set $returnAddress to "morning-mid-setup">>

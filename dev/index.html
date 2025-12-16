@@ -761,7 +761,7 @@ return val.object === &quot;neal&quot;
 The wanderer pats Neal, Setting the horse some hay.
 
 [[&quot;good boy.&quot;|end-mid-setup]] the wanderer says warmly.
-&lt;&lt;run window.removeFromCamp(&quot;neal&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="camp-morning" tags="" position="850,725" size="100,100">&lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.pluckMany(2)&gt;&gt;
+&lt;&lt;run window.removeFromCamp(&quot;neal&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="camp-morning" tags="" position="850,725" size="100,100">&lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.randomMany(2)&gt;&gt;
 &lt;&lt;else&gt;&gt; &lt;&lt;set $campMutators to []&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $returnAddress to &quot;morning-mid-setup&quot;&gt;&gt;
