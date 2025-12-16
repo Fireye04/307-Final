@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://43E731D4-16C7-446C-B13B-6735FFDBA33E// --><tw-storydata name="307 Final" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="43E731D4-16C7-446C-B13B-6735FFDBA33E" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Stow the sidebar initially
+	<!-- UUID://43E731D4-16C7-446C-B13B-6735FFDBA33E// --><tw-storydata name="307 Final" startnode="1" creator="Tweego" creator-version="2.1.1" ifid="43E731D4-16C7-446C-B13B-6735FFDBA33E" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Stow the sidebar initially
 config.ui.stowBarInitially = true;
 */
 
@@ -177,7 +177,7 @@ class tidbit {
     }
 
     getDescription(){
-        return "<<linkreplace \"<u>" + this.text + "</u>\">><u>" + this.expanded + "</u><<set $tidbitCount += 1>><<timed 1s>><<if $tidbitCount gte $tidbitCap>><<goto \"run-backstory\">><</if>><</timed>><</linkreplace>>";
+        return "<<linkreplace \"<u>" + this.text + "</u>\">><u>" + this.expanded + "</u><<timed 1s>><<set $tidbitCount += 1>><<if $tidbitCount gte $tidbitCap>><<goto \"run-backstory\">><</if>><</timed>><</linkreplace>>";
     }
 }
 
@@ -863,7 +863,8 @@ The wanderer spots a vulture.
 
 &quot;Vultures are nature&#39;s guides&quot; the wanderer muses to Themselves.
 
-The wanderer gestures Neal forward, following the vulture in their [[solitary silence|bison-continue]].</tw-passagedata><tw-passagedata pid="70" name="bison-continue" tags="" position="1225,850" size="100,100">The vulture settles down on a rotting bison carcass. 
+The wanderer gestures Neal forward, following the vulture in their [[solitary silence|buffalo-continue]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="bison-continue" tags="" position="1225,850" size="100,100">The vulture settles down on a rotting bison carcass. 
 
 The wanderer reaches into their saddle bag taking out a small, carved wooden bison, 
 feeling the grooves in its side in an attempt to calm themselves down.&lt;&lt;if $enduring is false&gt;&gt;
@@ -889,7 +890,7 @@ A day old, maybe less. Their grip on the carving tightens.&lt;&lt;if $enduring i
 The wanderer takes a deep breath and concentrates trying to cast her voice out of their brain.
 It is not effective.&lt;&lt;/if&gt;&gt;
 
-They look around. A plume of smoke [[rises|bison-rise]], about an hour&#39;s ride due northwest.
+They look around. A plume of smoke [[rises|::bison-rise]], about an hour&#39;s ride due northwest.
 &lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="bison-rise" tags="" position="225,975" size="100,100">Neal makes short work of the journey. 
 They could&#39;ve tracked the bastards just fine without the smoke, due to the littered trail of bison they saw along the way.
 They could feel their blood pressure rise with each additional corpse.

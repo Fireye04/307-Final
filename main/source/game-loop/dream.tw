@@ -2,7 +2,8 @@
 * Starting Node
 */
 
-:: Start
+:: dream
+
 Lightning crackles across the sky.
 
 The nightly screams 
@@ -10,22 +11,33 @@ assault
 the wanderer's mental fortress 
 once again.
 
-[[They Endure|start-endure]]
-[[They Relent|start-relent]]
+[[They Endure|endure]]
+[[They Relent|relent]]
 
-:: start-endure
+:: endure
+
 <<set $enduring to true>>
 Their focus redoubles as the walls are pommeled 
 again 
 and again, 
 grimacing with each subsequent impact.
 
+<<if $endureCount lt 2>>
 And moment by moment the wanderer endures,
 slowly but surely 
 making it 
-[[through the night|wake]].
+[[through the night|camp-morning]].
 
-:: start-relent
+<<elseif $endurecount is 2>>
+A loud Crack resounds through the wanderer's bastion.
+They set themselves upon repairing the damaged walls,
+but they can feel the voices [[winning|camp-morning]].
+<<else>>
+And with a loud crash, it all comes [[tumbling down|end-bad]].
+<</if>>
+
+:: relent
+
 <<set $enduring to false>>
 Exhausted, they lower their barriers,
 allowing the voices
@@ -40,6 +52,6 @@ to tear
 them 
 to shreds 
 once again.
-[[As they deserve|wake]].
+[[As they deserve|camp-morning]].
 
 

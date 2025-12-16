@@ -1,0 +1,156 @@
+/*the wanderer finds a slaughtered buffalo */
+
+:: bison
+
+/*TODO: weather states*/
+The wanderer spots a vulture.
+
+"Vultures are nature's guides" the wanderer muses to Themselves.
+
+The wanderer gestures Neal forward, following the vulture in their [[solitary silence|bison-continue]].
+
+:: bison-continue
+
+The vulture settles down on a rotting bison carcass. 
+
+The wanderer reaches into their saddle bag taking out a small, carved wooden bison, 
+feeling the grooves in its side in an attempt to calm themselves down.<<if $enduring is false>>
+
+"You're no better than them" Fala whispers.
+
+The wanderer grits their teeth. "You disrespect her memory," They respond.<</if>>
+
+They dismount to [[study the thing|bison-study]], scattering the vultures
+
+:: bison-study
+
+Several bullet holes <<linkappend "pepper its side.">> 
+Careless, imprecise shots. The animal died in great pain.
+<</linkappend>>
+The pelt remained on the beast, its state far too degraded to be of any use or value.
+A large gaping hole yawns from the beast's <<linkappend "skull">>
+Shotgun. Point blank or very close range. 
+Likely how the pained creature was put out of its misery.
+<<linkappend "The horns are missing">>
+Taken as prizes, no doubt.
+<</linkappend>><</linkappend>>
+Liquid blood still pooled <<linkappend "around the beast.">>
+A day old, maybe less. Their grip on the carving tightens.<<if $enduring is false>>
+
+"Pretender. Unworthy abandoner." Fala jeers at them. 
+The wanderer takes a deep breath and concentrates trying to cast her voice out of their brain.
+It is not effective.<</if>>
+
+They look around. A plume of smoke [[rises|bison-rise]], about an hour's ride due northwest.
+<</linkappend>>
+
+:: bison-rise
+
+Neal makes short work of the journey. 
+They could've tracked the bastards just fine without the smoke, due to the littered trail of bison they saw along the way.
+They could feel their blood pressure rise with each additional corpse.
+
+The off-key drunken voices singing get louder [[as they approach|bison-approach]]. 
+
+:: bison-approach
+
+The camp is haphazard. 
+A bonfire far larger than necessary, a half-set up tent, and bottles of liquor littered everywhere.
+
+They dismount Neal, and approach the singers. 
+They count four.
+
+"Excuse me." The wanderer interrupts. 
+No response; the singing continues.
+
+They sigh, drawing their revolver and [[firing once|bison-fire]] in the air.
+
+:: bison-fire
+
+The group shuts up fast.
+"Where the fuck did you come from?" One shouts.
+
+"Pardon the interruption, did you happen to kill those bison?"
+
+"Yeah! They're offering two bucks a horn if you want in." boasts one, before getting ruthlessly elbowed by his friend.
+"Remus! Shut the fuck up!" The other looks up at the wanderer, a phony smile on his lips.
+"Sorry, what's it to you?"
+
+<<if $enduring is false>>
+[[Shoot them|bison-shoot]]
+[[Spare them|bison-fala-spare]]
+<<else>>
+[[Shoot them|bison-shoot]]
+[[Spare them|bison-spare]]
+<</if>>
+
+:: bison-shoot
+
+<<set $bisonShot to true>>
+Four shots echo over the plains.<<if $enduring is false>>
+
+The wanderer feels a hand on their shoulder. Fala.
+
+"Well done." She says simply. 
+
+A tear rolls down their cheek. 
+"I miss you."
+
+"[[I know|bison-cleanup]]." She responds.<<else>>
+
+The wanderer studies the scene. 
+Havan had flown to the open can of beans one had been eating, and had begun to pick at it.
+
+They sighed. [[Time to clean up|bison-cleanup]].<</if>>
+
+
+:: bison-cleanup
+
+They took awhile to loot and gather the various items into a sufficiently burnable pile. 
+
+But finally, it was done. 
+They set it off, and spurred Neal off to wander once again, looking for a good place to set up camp.
+
+The day's exhaustion had <<link "caught up" $returnAddress>><</link>> with them.
+
+:: bison-spare
+
+<<set $bisonShot to false>>
+
+"I'm going to say this once. I have five shots left in this gun. That's one for each of you, and I even get a spare in case I miss." 
+They pause.
+"I don't miss."
+
+They click the hammer into position.
+"Here's what I need from you, to maybe prevent anything unfortunate from happening." 
+
+They gesture at the closest one.
+"You, bring me the horns you've gathered up to this point. And everyone else, get a nice blunt object."
+
+They flashed a skeletal smile "[[We're going hammering|bison-hammering]]"
+
+:: bison-hammering
+
+The sobs of lost capital and clacking of rocks on bone went on for a while.
+And finally, when no horns remained intact, the wanderer mounted Neal and took their leave to find a good spot to set up camp.
+
+The day's exhaustion had <<link "caught up" $returnAddress>><</link>>. with them.
+
+:: bison-fala-spare
+
+<<set $bisonShot to true>>
+
+The wanderer takes a deep breath and lowers their weapon. 
+They feel a hand grip theirs.
+
+They turn.
+Fala.
+
+"Traitor." She says, wrenching the gun from their hands, placing a shot squarely in each of the men's foreheads.
+She hands back the gun, her anger apparent. 
+
+They take it, jaw clenched. "They didn't deserve to die"
+
+"Oh? Were any of their lives any more valuable than those of the bison they killed? Or were to kill?"
+
+The wanderer [[remains silent|bison-cleanup]].
