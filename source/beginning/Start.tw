@@ -9,6 +9,8 @@
 [[mac 2|mac-finale][$returnAddress to "Start"]]
 [[finale|fala-finale][$returnAddress to "Start"]]
 
+<<= $tidbits[0].getDescription()>>
+
 Lightning crackles across the sky.
 
 The nightly screams 
