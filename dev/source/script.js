@@ -164,11 +164,11 @@ function setEncounters() {
 // TODO: add weight by priority
 function selectEncounter() {
     let temp = [];
-    // if (variables().encounters.length > 2) {
-    //     temp = [fallback, fallback];
-    // } else {
-    //     temp = [fallback];
-    // }
+    if (variables().encounters.length > 2) {
+        temp = [fallback, fallback];
+    } else {
+        temp = [fallback];
+    }
     for (let i = 0; i < variables().encounters.length; i++) {
         let cur = variables().encounters[i];
         if (cur.available()) {
@@ -176,6 +176,7 @@ function selectEncounter() {
         }
     }
     let index = Math.floor(Math.random() * temp.length);
+    console.log("index = " + index + "\ntemplen=" + temp.length)
     let target = temp[index];
     variables().currentEncounter = target;
 }

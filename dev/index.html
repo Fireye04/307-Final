@@ -270,11 +270,11 @@ function setEncounters() {
 // TODO: add weight by priority
 function selectEncounter() {
     let temp = [];
-    // if (variables().encounters.length > 2) {
-    //     temp = [fallback, fallback];
-    // } else {
-    //     temp = [fallback];
-    // }
+    if (variables().encounters.length > 2) {
+        temp = [fallback, fallback];
+    } else {
+        temp = [fallback];
+    }
     for (let i = 0; i < variables().encounters.length; i++) {
         let cur = variables().encounters[i];
         if (cur.available()) {
@@ -282,6 +282,7 @@ function selectEncounter() {
         }
     }
     let index = Math.floor(Math.random() * temp.length);
+    console.log("index = " + index + "\ntemplen=" + temp.length)
     let target = temp[index];
     variables().currentEncounter = target;
 }
@@ -854,6 +855,7 @@ them
 to shreds 
 once again.
 [[As they deserve|camp-morning]].</tw-passagedata><tw-passagedata pid="67" name="run-encounter" tags="" position="850,850" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
+&lt;&lt;run $encounters.deleteWith(function (val){return val.name === $currentEncounter.name;})
 &lt;&lt;set $returnAddress to &quot;end-encounter&quot;&gt;&gt;
 The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="end-encounter" tags="" position="975,850" size="100,100">/*TODO: run onCompleted()*/
 
