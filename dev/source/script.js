@@ -71,7 +71,7 @@ class tidbit {
     }
 
     getDescription(){
-        return "<<linkreplace \"" + this.text + "\">>" + this.expanded + "<<set $tidbitCount += 1>><<if $tidbitCount gte $tidbitCap>><<set $returnAddress to $currentCamp>><<goto \"run-backstory\">><</if>><</linkreplace>>";
+        return "<<linkreplace \"<u>" + this.text + "</u>\">><u>" + this.expanded + "</u><<timed 1>><<set $tidbitCount += 1>><<if $tidbitCount gte $tidbitCap>><<set $returnAddress to $currentCamp>><<goto \"run-backstory\">><</if>><</timed>><</linkreplace>>";
     }
 }
 
@@ -186,8 +186,16 @@ window.selectEncounter = () => selectEncounter();
 
 function setTidbits() {
     variables().tidbits = [
-        new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman. \nThe wanderer remembers the way she used to ponder the world by the fire. "),
-        new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman.")
+        new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman. \nThe wanderer remembers the way she used to ponder the world's questions by the fire. \nShe was more a philosipher than the stuck up suits they saw in the larger towns."),
+        new tidbit("campfire", "Mac sits by the camfire, feeding Havan.", "He had objected to Havan's addition at first, not a fan of birds to start.\nThe two, of course, became fast friends. \nHe chuckles as the bird loses a seed to the ground, and hops down to search for it."),
+        new tidbit("tent", "Mac studies the shabby tent.", "\"That damn kid needs ta take care of their shit.\" He mutters to himself, stroking his beard. \n\"Sewing lessons. Tomorrow,\" He decides, nodding."),
+        new tidbit("tent", "Fala stands by her and Mac's tent.", "She glances around nervously before snapping twice. \nHavan hops out of a nearby bush. \n\"Good boy\" she whispers, feeding him a treat and ushering the bird into the tent. \nNearby Mac gives a slight chuckle. \nHe enjoyed sleeping without Havan, but clearly enjoyed watching Fala break the rules for once even more."),
+        new tidbit("pack", "Mac rummages through his pack.", "\"Where's that damn pepper?\" \nFala walks over and hands him a small wooden box. \"We're running low\" \n\n\"Aye. Well wasn't there a good patch back south somewhere?\" \n\n\"Yes, good memory.\" She replies with a smile."),
+        new tidbit("pack", "Mac draws his ladle from his pack", "\"Soup time!\" He announces with glee, practically skipping his way over to his already bubbling cauldron."),
+        new tidbit("pack", "Fala sits by her pack fiddling with a tool of some sort.", "She seems to be fashioning arrow shafts with a whittling knife. \nShe works with practiced precision, careful not to remove too much material, while keeping the shaft as uniform as she can."),
+        new tidbit("neal", "Fala stands by her horse.", "Its name was Nodin.\nShe brushes his flank with care. \nNodin reaches for a patch of grass juuuust out of reach. \nFala bends down, grabbing it with one hand feeding it to the horse, while continuing her rhythmic brushing motion."),
+        new tidbit("neal", "Mac stands directly in front of Neal", "He holds neal's head in his hands, staring directly into neal's eyes, their heads almost touching.\n Neal stares back, unblinking.\n\"You're\"\n\"A\"\n\"Good\"\n\"Horse,\" the man enumerates."),
+        new tidbit("neal", "Fala seems to be laying into mac as he pets Neal", "\"Can we at least agree that the child needs actual consequenses to their actions?\" \nMac covers the horse's ears \n\"Oyoyoy, we can't be arguing in front of the horse, thinka the poor little guy havin' nightmares\" \nNeal's inquisitive eyes look up at mac, confused.\n Fala gives a smirk and a little chuckle, punching mac's shoulder. \n\"Goof.\""),
     ];
 }
 
