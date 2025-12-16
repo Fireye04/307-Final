@@ -1,0 +1,58 @@
+:: dead-guy
+
+The wanderer studies the corpse that they've found. 
+
+Its back is up against a tree; the previous owner seems to have died of exhaustion. 
+And not too long ago by the looks of it.
+Havan pecks at its [[bag|dg-bag]].
+
+:: dg-bag
+
+The wanderer does an inventory:
+Some hard tack.
+A slightly-shriveled apple. 
+.36 caliber revolver ammo? Score!
+Razor.
+Small bag containing a small amount of white powder.
+At least a hundred dollars?
+
+The wanderer glances around. Nobody.
+The corpse won't be using it, best not let it go to waste.
+
+They take it and sling it over Neal's back.
+
+<<if $enduring is false>><<set $tookHat to true>>
+<<set $buriedCorpse to false>>
+"Hold up a second, kiddo."
+Mac grabs the corpse's hat and plops it on the wanderer's head. 
+"There ya go. 'bout time to find camp, let's head out."
+
+The wanderer takes it off to look at it. 
+It's very well-made.
+They mentally shrug and [[plop|dg-end]] it back on.<<else>>
+They look back at the corpse. Its hat looks very well made.
+They [[take it|dg-take]]
+They [[leave it|dg-leave]]<</if>>
+
+:: dg-take
+
+They walk over and yoink the hat. [[Nice|dg-bury]].
+
+:: dg-leave
+
+They [[sigh|dg-bury]], not wanting to disturb the corpse.
+
+:: dg-bury
+
+<<set $buriedCorpse to true>>
+They pause as they ride away. 
+Should they body the thing? 
+
+It was, of course, human at some point. Like them.
+Perhaps it too deserved some respect. 
+
+They turn around and with a sigh [[begin digging|dg-end]]
+
+:: dg-end
+
+With the corpse finally behind them, they search <<link "for a campsite" $returnAddress>><</link>> once again.

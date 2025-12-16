@@ -1,0 +1,79 @@
+/*MAKE SURE TO SET $returnAddress BEFORE CALLING THIS FUNCTION*/
+
+:: fala-finale
+
+"They're here" Fala's quiet but urgent whisper pierced Their dreams like a skewer. 
+In all the years they had travelled together, the child had only heard that tone of urgency a handful of times, and only in the most dire of circumstances. 
+
+They quickly exited Their tent and began to gather Their things in the early morning's darkness, when they felt Fala grab their shoulders. 
+"No time. [[We go now|fala-now]]". 
+
+Their pack would have to suffice.
+
+:: fala-now
+
+"How did they..."
+
+"I don't know. I just need you to get on Neal with Mac right now. And take Havan. I love you"
+Havan, Fala's raven fluttered onto their shoulder. 
+
+The child opened their mouth, looking back to where Fala was, but the woman was nowhere to be seen.
+
+Mac was already sitting atop his horse, Neal, with his hand outstretched. 
+They grabbed it and were hoisted up in front of him.
+
+"[[Going Somewhere|fala-somewhere]]?" A cocky voice called out through the night.
+
+:: fala-somewhere
+
+"Don't bother. We've got you surrounded." 
+A man on horseback, holding a gun and a flickering lantern moved into the clearing.
+"Hector Axeford, Pinkerton Detective Agency. Y'all are under arrest for the murder of Buck Calhoun."
+
+"You two, Get off the horse and put your hands on your-- AAAAAAUGHHHHHHH" 
+The man screamed as an arrow sprouted from his eye.
+
+Mac spurred on Neal, [[rocketing|fala-rocketing]] out of the clearing.
+
+:: fala-rocketing
+
+<<linkappend "Gunshots rang out">>
+<<linkappend "FALA! WE CAN'T LEAVE FALA!">>
+<<linkappend "SHE'LL HOLD EM OFF AND CATCH UP LATER">>
+<<linkappend "HALT! Shouted a pinkerton in front of them.">>
+<<linkappend "BANG! The man slumped off his horse, a hole in his forhead, as the two rode by">>
+<<linkappend "GOOD SHOOTING, KID">>
+<<linkappend "FUCK THAT, WE TURN AROUND NOW TO HELP FALA.">>
+<<linkappend "Mac grinned a skeletal smile. No can do, kid. We already decided you're the priority.">>
+<<linkappend "The child let out a long shriek of agony, ignoring the numerous bullets whizzing by.">>
+[[BANG|fala-bang]], they fired back.
+<</linkappend>>
+<</linkappend>>
+<</linkappend>>
+<</linkappend>>
+<</linkappend>><</linkappend>><</linkappend>><</linkappend>><</linkappend>>
+
+:: fala-bang
+
+The two of them kept riding as long as they could, long after they had lost their trail.
+"You're bleeding" Noted Mac, gesturing at the bullet hole in their left arm.
+
+"Didn't notice." They muttered.
+
+Mac pulled Neal to a stop, and tried to get off. 
+Havan gave a caw of surprise as Mac's rear leg caught the saddle, 
+sending the stout man tumbling [[to the ground|fala-ground]]. 
+
+:: fala-ground
+
+He was bleeding. A lot.
+"No, no no no nonono" The child lept off Neal, desperately wrapping wounds in whatever clothing was handy. 
+
+"Hey, hey." Mac wheezed. 
+"It's too late fer me, kiddo. You're all that mattered. To either of us. Keep going, will ya?"
+
+"Stop with that shit, you're making it, you're making it, you hear me?"
+
+Mac chuckled silently, that grin on his face to the last.
+
+"<<link "Eat a sandwich" "endscreen">><</link>> for me, will ya?"

@@ -1,0 +1,77 @@
+/* Handles first camp pack up -> tbd
+* from: wake
+*/
+:: camp-morning 
+<<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<<else>> <<set $campMutators to []>>
+<</if>>
+<<set $returnAddress to "morning-mid-setup">>
+<<run newWeather()>>
+<<run window.setTAC("morning")>>
+The wanderer wakes in their tent once again.
+<<if $currentWeather === "rainy">>The pitter patter of rain on the roof is calming.
+
+They shoulder the entrance flap aside and [[exit the tent|start-camp]].
+<<elseif $currentWeather === "sunny">>The first rays of sun creep in through a crack in the entrance.
+
+Havan pecks them awake.
+
+"G'mornin, little guy" they yawn as they get dressed, then [[exit the tent|start-camp]]
+<</if>>
+
+:: morning-wake
+They survey their camp.
+Time to pack up.
+
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>>
+
+:: morning-mid-cleanup
+<<if $currentWeather === "rainy">>They once again survey the remaining campsite
+to the calm pattering of a subdued drizzle.<<else>>They squint, once again surveying the remaining campsite.<</if>>
+<<if $thingsAtCamp.length gt 0>>
+<<for _i to 0; _i lt $thingsAtCamp.length; _i++>>
+<<= $thingsAtCamp[_i].getDescription()>>
+<</for>><<else>>
+[[Time to go|run-encounter]].
+<</if>>
+
+:: morning-campfire
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "campfire"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
+The wanderer [[clears up|morning-mid-cleanup]] their campfire.
+<<run window.removeFromCamp("campfire")>>
+
+:: morning-tent
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "tent"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
+The wanderer [[clears up|morning-mid-cleanup]] their tent.
+<<run window.removeFromCamp("tent")>>
+
+:: morning-pack
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "pack"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
+The wanderer [[clears up|morning-mid-cleanup]] their pack.
+<<run window.removeFromCamp("pack")>>
+
+:: morning-neal
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "neal"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
+The wanderer pats Neal. 
+
+[["good boy."|morning-mid-cleanup]] the wanderer says warmly.
+<<run window.removeFromCamp("neal")>>
+

@@ -1,0 +1,54 @@
+:: end-bad
+<<run window.newWeather()>>
+The wanderer wakes up calmly and exits their tent.
+<<if $weather is "sunny">>
+The moon tells them it is close to 2 in the morning.
+The clearing is fully lit by its light. Almost full.
+<<if $weather is "rainy">>
+The light drizzle and partly clouded sky obscure the moon, casting ghostly shadows on the ground. 
+<</if>>
+
+Mac and Fala aren't here. [[They're alone|end-bad-alone]].
+
+:: end-bad-alone
+They drop a small pile of seeds in front of Havan who begins to naively enjoy them,
+and delivers the rest of their hay to Neal, who begins munching on it gratefully.
+The wanderer unholsters Neal, who gladly shakes his mane.
+
+<<if $backstories.length is 5>>
+The wanderer turns away before they started crying or have any second thoughts.
+
+They had [[made up their mind|endscreen]].
+<<else>>
+The wanderer glances at their revolver wearily.<<if $backstories.length is 1>>
+They chuckle to themselves remembering the day they had got it. 
+
+The day at the bar [[with mac|end-bad-mac]].<<else>>
+They feel to their knees, paralyzed by indecision.
+
+They couldn't block it out but they couldn't do anything about it either.
+
+And so they remained paralyzed till the early hours of morning, 
+where they picked their gun back up, emotionless, 
+put it back in its holster, and began the day anew.
+
+[[As if nothing had happened|endscreen]]
+<</if>>
+<</if>>
+
+:: end-bad-mac
+
+They had killed its previous owner, how ironic that it would then kill them?
+Their chuckle gets louder and louder, never reaching their eyes, which, unblinking, were fixed on a point not in space, but time.
+
+And reaching the laugh's climax something in them snaps, and imperceptibly the laughs shift to sobs, and they fall to their knees, then their side. 
+Havan flies over, seeds abandoned and curls up beside them, closely followed by neal.
+
+They sob and sob and sob. 
+For the memories. 
+The good times. 
+The bad times.
+And everything in between.
+
+Hours later when they had exhausted all the water their body was willing to spare,
+they stared straight up and they felt better than they [[ever had before|endscreen]].

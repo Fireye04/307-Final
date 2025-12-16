@@ -7,10 +7,28 @@
 }
 
 :: StoryTitle
-306 Final
+307 Final
 
 :: StoryInit
+<<set $tidbitCap to 2>>
+<<set $tidbitsPerCamp to 2>>
+
 <<set $endureCount to 0>>
 <<set $enduring to false>>
 <<set $currentWeather to "sunny">>
 <<set $thingsAtCamp to []>>
+<<set $encounters to []>>
+<<set $currentEncounter to "none">>
+<<run window.setEncounters()>>
+<<set $returnAddress to "none">>
+<<set $tidbits to []>>
+<<run window.setTidbits()>>
+<<set $tidbitCount = 0>>
+<<set $campMutators = []>>
+<<set $bisonShot to false>>
+
+<<set $backstories to ["fala-finale", "mac-finale", "fala-2", "fala-1", "mac-1"]>>
+
+:: none
+
+Something went horribly wrong, I'm so sorry (this is a bug, report it here: https://github.com/Fireye04/307-Final/issues)

@@ -1,0 +1,10 @@
+:: fallback
+
+The day passes, Neal trods on, and Havan collects seeds from the various plants that scatter the wilderness. 
+
+The wanderer pauses Neal for a moment and takes a deep breath.<<if $currentWeather === "rainy">>
+The gentle pitter-patter of rain never fails to calm them down. <<else>>
+The cloudless sky shines a beautiful blue amidst the trees.<</if>>
+
+The day passes uneventfully and as the sun sets, 
+the wanderer finds themselves once again searching for a place to <<link "set up camp" $returnAddress>><</link>>.  
