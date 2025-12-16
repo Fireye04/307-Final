@@ -21,7 +21,7 @@ The corpse won't be using it, best not let it go to waste.
 
 They take it and sling it over Neal's back.
 
-<<if $endured is false>><<set $tookHat to true>>
+<<if $enduring is false>><<set $tookHat to true>>
 <<set $buriedCorpse to false>>
 "Hold up a second, kiddo."
 Mac grabs the corpse's hat and plops it on the wanderer's head. 
