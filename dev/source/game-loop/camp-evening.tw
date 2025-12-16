@@ -4,6 +4,8 @@
 
 :: camp-evening
 <<set $curentCamp to "end-mid-setup">>
+<<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<</if>>
 <<run window.setTAC("evening")>>
 Time to set up camp.
 
@@ -23,20 +25,41 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 
 :: end-campfire
 
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "campfire"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
+
 The wanderer [[sets up|end-mid-setup]] their campfire.
 <<run window.removeFromCamp("campfire")>>
 
 :: end-tent
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "tent"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 
 The wanderer [[sets up|end-mid-setup]] their tent.
 <<run window.removeFromCamp("tent")>>
 
 :: end-pack
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "pack"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 
 The wanderer [[sets up|end-mid-setup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
 :: end-neal
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "neal"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 The wanderer pats Neal, Setting the horse some hay.
 
 [["good boy."|end-mid-setup]] the wanderer says warmly.

@@ -148,10 +148,14 @@ window.removeFromCamp = (thing = "") => removeFromCamp(thing);
 
 /********ENCOUNTERS********/
 
+const deadguy= new encounter("dead-guy", 1, () => {return true}, () => {});
 const search_party = new encounter("search-party", 1, () => {return true}, () => {});
 const search_party2 = new encounter("search-party2",3, () => { return hasVisited("search-party")}, () => {});
+const bison = new encounter("bison", 1, () => {return true}, () => {});
+const couple = new encounter("couple",1, () => { return true}, () => {});
+const fallback = new encounter("fallback",1, () => { return true}, () => {});
 
-const encountersDefault = [search_party, search_party2];
+const encountersDefault = [bison, couple, deadguy];
 
 function setEncounters() {
     variables().encounters = encountersDefault;
@@ -160,20 +164,19 @@ function setEncounters() {
 // TODO: add weight by priority
 function selectEncounter() {
     let temp = [];
-        console.log(variables().encounters);
+    if (variables().encounters.length > 2) {
+        temp = [fallback, fallback];
+    } else {
+        temp = [fallback];
+    }
     for (let i = 0; i < variables().encounters.length; i++) {
         let cur = variables().encounters[i];
-        console.log(cur.available());
         if (cur.available()) {
-        console.log(cur.name);
             temp.push(cur);
         }
     }
     let index = Math.floor(Math.random() * temp.length);
-        console.log(index);
-        console.log(temp);
     let target = temp[index];
-        console.log(target.name);
     variables().currentEncounter = target;
 }
 
@@ -198,8 +201,5 @@ function setTidbits() {
         new tidbit("neal", "Fala seems to be laying into mac as he pets Neal", "\"Can we at least agree that the child needs actual consequenses to their actions?\" \nMac covers the horse's ears \n\"Oyoyoy, we can't be arguing in front of the horse, thinka the poor little guy havin' nightmares\" \nNeal's inquisitive eyes look up at mac, confused.\n Fala gives a smirk and a little chuckle, punching mac's shoulder. \n\"Goof.\""),
     ];
 }
-
 window.setTidbits = () => setTidbits();
-
-
 

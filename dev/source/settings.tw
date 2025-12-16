@@ -11,6 +11,7 @@
 
 :: StoryInit
 <<set $tidbitCap to 2>>
+<<set $tidbitsPerCamp to 2>>
 
 <<set $endureCount to 0>>
 <<set $enduring to false>>
@@ -22,7 +23,8 @@
 <<set $returnAddress to "none">>
 <<set $tidbits to []>>
 <<run window.setTidbits()>>
-<<set $tidbitCount>>
+<<set $tidbitCount = 0>>
+<<set $campMutators = []>>
 <<set $bisonShot to false>>
 
 <<set $backstories to ["fala-finale", "mac-finale", "fala-2", "fala-1", "mac-1"]>>

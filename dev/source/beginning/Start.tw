@@ -3,16 +3,6 @@
 */
 
 :: Start
-[[mac|mac-1][$returnAddress to "Start"]]
-[[fala|fala-1][$returnAddress to "Start"]]
-[[fala 2|fala-2][$returnAddress to "Start"]]
-[[mac 2|mac-finale][$returnAddress to "Start"]]
-[[finale|fala-finale][$returnAddress to "Start"]]
-
-<<= $tidbits>>
-<<= $tidbits[0]>>
-<<= $tidbits[0].getDescription()>>
-
 Lightning crackles across the sky.
 
 The nightly screams 

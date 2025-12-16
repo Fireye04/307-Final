@@ -2,6 +2,8 @@
 * from: wake
 */
 :: camp-morning 
+<<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<</if>>
 <<set $curentCamp to "morning-mid-setup">>
 <<run newWeather()>>
 <<run window.setTAC("morning")>>
@@ -35,23 +37,39 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 [[Time to go|run-encounter]].
 <</if>>
 
-/*TODO: Make custom things at camp list for intro THIS IS BORKED*/
 :: morning-campfire
-
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "campfire"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 The wanderer [[clears up|morning-mid-cleanup]] their campfire.
 <<run window.removeFromCamp("campfire")>>
 
 :: morning-tent
-
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "tent"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 The wanderer [[clears up|morning-mid-cleanup]] their tent.
 <<run window.removeFromCamp("tent")>>
 
 :: morning-pack
-
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "pack"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 The wanderer [[clears up|morning-mid-cleanup]] their pack.
 <<run window.removeFromCamp("pack")>>
 
 :: morning-neal
+<<set $target to $campMutators.deleteWith(function (val){
+return val.object === "neal"
+})>><<for _i, _item range $target>>
+<<= _item.getDescription()>>
+<</for>>
 The wanderer pats Neal. 
 
 [["good boy."|morning-mid-cleanup]] the wanderer says warmly.
