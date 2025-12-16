@@ -855,7 +855,7 @@ them
 to shreds 
 once again.
 [[As they deserve|camp-morning]].</tw-passagedata><tw-passagedata pid="67" name="run-encounter" tags="" position="850,850" size="100,100">&lt;&lt;run window.selectEncounter()&gt;&gt;
-&lt;&lt;run $encounters.deleteWith(function (val){return val.name === $currentEncounter.name;})
+&lt;&lt;run $encounters.deleteWith(function (val){return val.name === $currentEncounter.name;})&gt;&gt;
 &lt;&lt;set $returnAddress to &quot;end-encounter&quot;&gt;&gt;
 The wanderer &lt;&lt;link &quot;sets off&quot; $currentEncounter.name&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $currentWeather === &quot;rainy&quot;&gt;&gt; into the clouded morning.&lt;&lt;else&gt;&gt; into the sunny morning.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="end-encounter" tags="" position="975,850" size="100,100">/*TODO: run onCompleted()*/
 
