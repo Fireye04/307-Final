@@ -28,7 +28,6 @@ to the calm pattering of a subdued drizzle.<<else>>They squint, once again surve
 <<set $target to $campMutators.deleteWith(function (val){
 return val.object === "campfire"
 })>><<for _i, _item range $target>>
-<<= $target[_i].getDescription()>>
 <<= _item.getDescription()>>
 <</for>>
 
@@ -39,7 +38,6 @@ The wanderer [[sets up|end-mid-setup]] their campfire.
 <<set $target to $campMutators.deleteWith(function (val){
 return val.object === "tent"
 })>><<for _i, _item range $target>>
-<<= $target[_i].getDescription()>>
 <<= _item.getDescription()>>
 <</for>>
 
@@ -50,7 +48,6 @@ The wanderer [[sets up|end-mid-setup]] their tent.
 <<set $target to $campMutators.deleteWith(function (val){
 return val.object === "pack"
 })>><<for _i, _item range $target>>
-<<= $target[_i].getDescription()>>
 <<= _item.getDescription()>>
 <</for>>
 
@@ -61,7 +58,6 @@ The wanderer [[sets up|end-mid-setup]] their pack.
 <<set $target to $campMutators.deleteWith(function (val){
 return val.object === "neal"
 })>><<for _i, _item range $target>>
-<<= $target[_i].getDescription()>>
 <<= _item.getDescription()>>
 <</for>>
 The wanderer pats Neal, Setting the horse some hay.
