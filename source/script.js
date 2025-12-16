@@ -71,7 +71,7 @@ class tidbit {
     }
 
     getDescription(){
-        return "<<linkreplace \"<u>" + this.text + "</u>\">><u>" + this.expanded + "</u><<timed 1s>><<set $tidbitCount += 1>><<if $tidbitCount gte $tidbitCap>><<goto \"run-backstory\">><</if>><</timed>><</linkreplace>>";
+        return "<<linkreplace \"<u>" + this.text + "</u>\">><u>" + this.expanded + "</u><<set $tidbitCount += 1>><<timed 1s>><<if $tidbitCount gte $tidbitCap>><<goto \"run-backstory\">><</if>><</timed>><</linkreplace>>";
     }
 }
 

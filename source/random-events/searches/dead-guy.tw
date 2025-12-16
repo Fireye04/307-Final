@@ -29,7 +29,7 @@ Mac grabs the corpse's hat and plops it on the wanderer's head.
 
 The wanderer takes it off to look at it. 
 It's very well-made.
-They mentally shrug and [[plop|dg-leave]] it back on.<<else>>
+They mentally shrug and [[plop|dg-end]] it back on.<<else>>
 They look back at the corpse. Its hat looks very well made.
 They [[take it|dg-take]]
 They [[leave it|dg-leave]]<</if>>
@@ -51,8 +51,8 @@ Should they body the thing?
 It was, of course, human at some point. Like them.
 Perhaps it too deserved some respect. 
 
-They turn around and with a sigh [[begin digging|dg-leave]]
+They turn around and with a sigh [[begin digging|dg-end]]
 
-:: dg-leave
+:: dg-end
 
 With the corpse finally behind them, they search <<link "for a campsite" $returnAddress>><</link>> once again.
