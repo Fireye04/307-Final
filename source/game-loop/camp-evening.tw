@@ -3,6 +3,7 @@
 */
 
 :: camp-evening
+<<set $curentCamp to "end-mid-setup">>
 <<run window.setTAC("evening")>>
 Time to set up camp.
 

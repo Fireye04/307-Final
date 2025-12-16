@@ -1,5 +1,5 @@
 ::run-backstory
-<<set $tidbits -= 1>><<set $current to $backstories.pop()>>
+<<set $tidbitCount -= $tidbitCap>><<set $current to $backstories.pop()>>
 <<if $current is "mac-1">>
 They didn't <<link "deserve" $current>><</link>> to meet a guy like Mac.
 <<elseif $current is "fala-1">>
