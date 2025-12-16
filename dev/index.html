@@ -717,7 +717,7 @@ Regardless, I hope you enjoyed what you did play, and I hope you can understand 
 I hope to tie up the many narrative loose ends I left dangling over winter break and hopefully release a non-jam (so to speak) version of this thing then.
 
 Until I do, pretend the real story is the backstories! I was actually able to cook on those, and they&#39;re really the only thing that I&#39;d say is in a presentable state at the moment. (and if you didn&#39;t get any backstories, perhaps let some voices in ehehe)</tw-passagedata><tw-passagedata pid="51" name="camp-evening" tags="" position="100,725" size="100,100">&lt;&lt;set $returnAddress to &quot;end-mid-setup&quot;&gt;&gt;
-&lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.pluckMany(2)&gt;&gt;
+&lt;&lt;if $enduring is false&gt;&gt;&lt;&lt;set $campMutators to $tidbits.randomMany(2)&gt;&gt;
 &lt;&lt;else&gt;&gt; &lt;&lt;set $campMutators to []&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;run window.setTAC(&quot;evening&quot;)&gt;&gt;
