@@ -3,7 +3,7 @@
 */
 
 :: camp-evening
-<<set $curentCamp to "end-mid-setup">>
+<<set $returnAddress to "end-mid-setup">>
 <<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
 <<else>> <<set $campMutators to []>>
 <</if>>

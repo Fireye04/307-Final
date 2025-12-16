@@ -5,7 +5,7 @@
 <<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
 <<else>> <<set $campMutators to []>>
 <</if>>
-<<set $curentCamp to "morning-mid-setup">>
+<<set $returnAddress to "morning-mid-setup">>
 <<run newWeather()>>
 <<run window.setTAC("morning")>>
 The wanderer wakes in their tent once again.
