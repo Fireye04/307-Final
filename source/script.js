@@ -184,6 +184,13 @@ window.selectEncounter = () => selectEncounter();
 
 /********TIDBITS********/
 
-variables().tidbits = [
-    new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman.")
-];
+function setTidbits() {
+    variables().tidbits = [
+        new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman.")
+    ];
+}
+
+window.setTidbits = () => setTidbits();
+
+
+
