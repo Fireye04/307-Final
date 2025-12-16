@@ -71,7 +71,7 @@ class tidbit {
     }
 
     getDescription(){
-        return "<<linkreplace \"" + this.text + "\">>" + this.expanded + "<</linkreplace>>";
+        return "<<linkreplace \"" + this.text + "\">>" + this.expanded + "<<set $tidbitCount += 1>><<if $tidbitCount gte $tidbitCap>><<set $returnAddress to $currentCamp>><<goto \"run-backstory\">><</if>><</linkreplace>>";
     }
 }
 
@@ -186,6 +186,7 @@ window.selectEncounter = () => selectEncounter();
 
 function setTidbits() {
     variables().tidbits = [
+        new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman. \nThe wanderer remembers the way she used to ponder the world by the fire. "),
         new tidbit("campfire", "Fala sits by the campfire pondering the flames", "She was a kind woman.")
     ];
 }

@@ -2,6 +2,7 @@
 * from: wake
 */
 :: camp-morning 
+<<set $curentCamp to "morning-mid-setup">>
 <<run newWeather()>>
 <<run window.setTAC("morning")>>
 The wanderer wakes in their tent once again.
