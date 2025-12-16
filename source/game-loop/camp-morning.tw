@@ -3,6 +3,7 @@
 */
 :: camp-morning 
 <<if $enduring is false>><<set $campMutators to $tidbits.pluckMany(2)>>
+<<else>> <<set $campMutators to []>>
 <</if>>
 <<set $curentCamp to "morning-mid-setup">>
 <<run newWeather()>>
@@ -10,13 +11,12 @@
 The wanderer wakes in their tent once again.
 <<if $currentWeather === "rainy">>The pitter patter of rain on the roof is calming.
 
-They shoulder the entrance flap aside and [[exit the tent|start-camp]]<</if>>.
+They shoulder the entrance flap aside and [[exit the tent|start-camp]].
 <<elseif $currentWeather === "sunny">>The first rays of sun creep in through a crack in the entrance.
 
 Havan pecks them awake.
 
 "G'mornin, little guy" they yawn as they get dressed, then [[exit the tent|start-camp]]
-<</if>>
 <</if>>
 
 :: morning-wake
